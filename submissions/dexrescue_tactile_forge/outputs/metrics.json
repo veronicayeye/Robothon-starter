@@ -1,0 +1,5089 @@
+{
+  "project": "DexRescue Tactile Forge",
+  "task": "Five-finger tactile hand sorts emergency objects into triage zones with scripted autonomy and sensor logging.",
+  "rubric_targets": [
+    "native MJCF joints, collisions, position actuators, cameras, frame sensors and touch sensors",
+    "multi-finger pre-shape, grasp, transport, release and inspection phases",
+    "deterministic one-command reproduction with video and metrics outputs"
+  ],
+  "scene": "/Users/zhuhaonan/Documents/Robothon/submissions/dexrescue_tactile_forge/scene.xml",
+  "video": "/Users/zhuhaonan/Documents/Robothon/submissions/dexrescue_tactile_forge/demo.mp4",
+  "duration_s": 65.0,
+  "plan_duration_s": 18.8,
+  "fps": 30,
+  "task_score": {
+    "success_rate": 1.0,
+    "objects_sorted": 3,
+    "total_objects": 3,
+    "object_results": {
+      "thermal_tag": {
+        "target_zone": "urgent red zone",
+        "final_position": [
+          -0.0,
+          0.32,
+          0.065
+        ],
+        "xy_error_m": 0.0,
+        "success": true
+      },
+      "med_vial": {
+        "target_zone": "fragile medicine zone",
+        "final_position": [
+          0.42,
+          0.3,
+          0.0828
+        ],
+        "xy_error_m": 0.0,
+        "success": true
+      },
+      "salvage_key": {
+        "target_zone": "safe green zone",
+        "final_position": [
+          -0.42,
+          0.3,
+          0.0669
+        ],
+        "xy_error_m": 0.0,
+        "success": true
+      }
+    }
+  },
+  "sensor_peaks": {
+    "palm_position": 0.5727,
+    "thumb_touch_force": 7885.6512,
+    "index_touch_force": 6032.6674,
+    "middle_touch_force": 5919.6125,
+    "ring_touch_force": 5977.1035,
+    "little_touch_force": 5521.4281,
+    "thumb_flexion": 1.2708,
+    "index_flexion": 1.2147,
+    "middle_flexion": 1.3115,
+    "wrist_roll_rate": 15.5131
+  },
+  "trajectory_samples": [
+    {
+      "video_time_s": 0.0,
+      "plan_time_s": 0.0,
+      "phase": "scan and open hand",
+      "palm_target": [
+        0.0,
+        -0.25,
+        0.29
+      ],
+      "grasp": 0.0,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 0.23,
+      "plan_time_s": 0.07,
+      "phase": "approach thermal_tag",
+      "palm_target": [
+        0.0,
+        -0.25,
+        0.29
+      ],
+      "grasp": 0.0,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 3031.2285,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 0.47,
+      "plan_time_s": 0.13,
+      "phase": "approach thermal_tag",
+      "palm_target": [
+        0.0,
+        -0.25,
+        0.29
+      ],
+      "grasp": 0.0,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 0.7,
+      "plan_time_s": 0.2,
+      "phase": "approach thermal_tag",
+      "palm_target": [
+        0.0,
+        -0.25,
+        0.29
+      ],
+      "grasp": 0.0,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 0.93,
+      "plan_time_s": 0.27,
+      "phase": "approach thermal_tag",
+      "palm_target": [
+        0.0,
+        -0.25,
+        0.29
+      ],
+      "grasp": 0.0,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 1.17,
+      "plan_time_s": 0.34,
+      "phase": "approach thermal_tag",
+      "palm_target": [
+        0.0,
+        -0.25,
+        0.29
+      ],
+      "grasp": 0.0,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 1.4,
+      "plan_time_s": 0.4,
+      "phase": "approach thermal_tag",
+      "palm_target": [
+        0.0,
+        -0.25,
+        0.29
+      ],
+      "grasp": 0.0,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 1.63,
+      "plan_time_s": 0.47,
+      "phase": "approach thermal_tag",
+      "palm_target": [
+        0.0,
+        -0.25,
+        0.29
+      ],
+      "grasp": 0.0,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 1.87,
+      "plan_time_s": 0.54,
+      "phase": "approach thermal_tag",
+      "palm_target": [
+        0.0,
+        -0.25,
+        0.29
+      ],
+      "grasp": 0.0,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 2.1,
+      "plan_time_s": 0.61,
+      "phase": "approach thermal_tag",
+      "palm_target": [
+        0.0,
+        -0.25,
+        0.29
+      ],
+      "grasp": 0.0,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 2.33,
+      "plan_time_s": 0.67,
+      "phase": "approach thermal_tag",
+      "palm_target": [
+        0.0,
+        -0.25,
+        0.29
+      ],
+      "grasp": 0.0,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 2.57,
+      "plan_time_s": 0.74,
+      "phase": "approach thermal_tag",
+      "palm_target": [
+        0.0,
+        -0.25,
+        0.29
+      ],
+      "grasp": 0.0,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 2.8,
+      "plan_time_s": 0.81,
+      "phase": "approach thermal_tag",
+      "palm_target": [
+        0.0,
+        -0.25,
+        0.29
+      ],
+      "grasp": 0.0,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 3.03,
+      "plan_time_s": 0.88,
+      "phase": "approach thermal_tag",
+      "palm_target": [
+        0.001,
+        -0.249,
+        0.289
+      ],
+      "grasp": 0.001,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 462.6526,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 3.27,
+      "plan_time_s": 0.94,
+      "phase": "approach thermal_tag",
+      "palm_target": [
+        0.002,
+        -0.247,
+        0.287
+      ],
+      "grasp": 0.004,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 3.5,
+      "plan_time_s": 1.01,
+      "phase": "approach thermal_tag",
+      "palm_target": [
+        0.003,
+        -0.245,
+        0.283
+      ],
+      "grasp": 0.009,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 3.73,
+      "plan_time_s": 1.08,
+      "phase": "approach thermal_tag",
+      "palm_target": [
+        0.006,
+        -0.242,
+        0.279
+      ],
+      "grasp": 0.014,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 3.97,
+      "plan_time_s": 1.15,
+      "phase": "approach thermal_tag",
+      "palm_target": [
+        0.008,
+        -0.238,
+        0.274
+      ],
+      "grasp": 0.02,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 4.2,
+      "plan_time_s": 1.21,
+      "phase": "approach thermal_tag",
+      "palm_target": [
+        0.011,
+        -0.234,
+        0.269
+      ],
+      "grasp": 0.026,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 4.43,
+      "plan_time_s": 1.28,
+      "phase": "approach thermal_tag",
+      "palm_target": [
+        0.013,
+        -0.23,
+        0.264
+      ],
+      "grasp": 0.033,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 4.67,
+      "plan_time_s": 1.35,
+      "phase": "approach thermal_tag",
+      "palm_target": [
+        0.015,
+        -0.227,
+        0.259
+      ],
+      "grasp": 0.038,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 4.9,
+      "plan_time_s": 1.42,
+      "phase": "approach thermal_tag",
+      "palm_target": [
+        0.017,
+        -0.224,
+        0.255
+      ],
+      "grasp": 0.043,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 5.13,
+      "plan_time_s": 1.48,
+      "phase": "approach thermal_tag",
+      "palm_target": [
+        0.019,
+        -0.222,
+        0.252
+      ],
+      "grasp": 0.047,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 5.37,
+      "plan_time_s": 1.55,
+      "phase": "approach thermal_tag",
+      "palm_target": [
+        0.02,
+        -0.22,
+        0.25
+      ],
+      "grasp": 0.049,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 5.6,
+      "plan_time_s": 1.62,
+      "phase": "tactile pre-shape thermal_tag",
+      "palm_target": [
+        0.02,
+        -0.22,
+        0.25
+      ],
+      "grasp": 0.051,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 5.83,
+      "plan_time_s": 1.69,
+      "phase": "tactile pre-shape thermal_tag",
+      "palm_target": [
+        0.02,
+        -0.22,
+        0.247
+      ],
+      "grasp": 0.063,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 6.07,
+      "plan_time_s": 1.75,
+      "phase": "tactile pre-shape thermal_tag",
+      "palm_target": [
+        0.02,
+        -0.22,
+        0.24
+      ],
+      "grasp": 0.087,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 6.3,
+      "plan_time_s": 1.82,
+      "phase": "tactile pre-shape thermal_tag",
+      "palm_target": [
+        0.02,
+        -0.22,
+        0.231
+      ],
+      "grasp": 0.121,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 6.53,
+      "plan_time_s": 1.89,
+      "phase": "tactile pre-shape thermal_tag",
+      "palm_target": [
+        0.02,
+        -0.22,
+        0.22
+      ],
+      "grasp": 0.162,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 6.77,
+      "plan_time_s": 1.96,
+      "phase": "tactile pre-shape thermal_tag",
+      "palm_target": [
+        0.02,
+        -0.22,
+        0.209
+      ],
+      "grasp": 0.205,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 7.0,
+      "plan_time_s": 2.02,
+      "phase": "tactile pre-shape thermal_tag",
+      "palm_target": [
+        0.02,
+        -0.22,
+        0.197
+      ],
+      "grasp": 0.247,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 7.23,
+      "plan_time_s": 2.09,
+      "phase": "tactile pre-shape thermal_tag",
+      "palm_target": [
+        0.02,
+        -0.22,
+        0.187
+      ],
+      "grasp": 0.286,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 7.47,
+      "plan_time_s": 2.16,
+      "phase": "tactile pre-shape thermal_tag",
+      "palm_target": [
+        0.02,
+        -0.22,
+        0.178
+      ],
+      "grasp": 0.319,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 7.7,
+      "plan_time_s": 2.23,
+      "phase": "tactile pre-shape thermal_tag",
+      "palm_target": [
+        0.02,
+        -0.22,
+        0.172
+      ],
+      "grasp": 0.341,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 7.93,
+      "plan_time_s": 2.29,
+      "phase": "tactile pre-shape thermal_tag",
+      "palm_target": [
+        0.02,
+        -0.22,
+        0.17
+      ],
+      "grasp": 0.35,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 8.17,
+      "plan_time_s": 2.36,
+      "phase": "closed-loop grasp thermal_tag",
+      "palm_target": [
+        0.02,
+        -0.22,
+        0.17
+      ],
+      "grasp": 0.363,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 8.4,
+      "plan_time_s": 2.43,
+      "phase": "closed-loop grasp thermal_tag",
+      "palm_target": [
+        0.02,
+        -0.22,
+        0.17
+      ],
+      "grasp": 0.401,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 8.63,
+      "plan_time_s": 2.5,
+      "phase": "closed-loop grasp thermal_tag",
+      "palm_target": [
+        0.02,
+        -0.22,
+        0.17
+      ],
+      "grasp": 0.46,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 8.87,
+      "plan_time_s": 2.56,
+      "phase": "closed-loop grasp thermal_tag",
+      "palm_target": [
+        0.02,
+        -0.22,
+        0.17
+      ],
+      "grasp": 0.533,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 9.1,
+      "plan_time_s": 2.63,
+      "phase": "closed-loop grasp thermal_tag",
+      "palm_target": [
+        0.02,
+        -0.22,
+        0.17
+      ],
+      "grasp": 0.613,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 9.33,
+      "plan_time_s": 2.7,
+      "phase": "closed-loop grasp thermal_tag",
+      "palm_target": [
+        0.02,
+        -0.22,
+        0.17
+      ],
+      "grasp": 0.695,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 9.57,
+      "plan_time_s": 2.77,
+      "phase": "closed-loop grasp thermal_tag",
+      "palm_target": [
+        0.02,
+        -0.22,
+        0.17
+      ],
+      "grasp": 0.773,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 9.8,
+      "plan_time_s": 2.83,
+      "phase": "closed-loop grasp thermal_tag",
+      "palm_target": [
+        0.02,
+        -0.22,
+        0.17
+      ],
+      "grasp": 0.839,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 10.03,
+      "plan_time_s": 2.9,
+      "phase": "closed-loop grasp thermal_tag",
+      "palm_target": [
+        0.02,
+        -0.22,
+        0.17
+      ],
+      "grasp": 0.89,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 10.27,
+      "plan_time_s": 2.97,
+      "phase": "closed-loop grasp thermal_tag",
+      "palm_target": [
+        0.02,
+        -0.22,
+        0.17
+      ],
+      "grasp": 0.917,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 10.5,
+      "plan_time_s": 3.04,
+      "phase": "lift thermal_tag",
+      "palm_target": [
+        0.02,
+        -0.22,
+        0.171
+      ],
+      "grasp": 0.92,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 10.73,
+      "plan_time_s": 3.1,
+      "phase": "lift thermal_tag",
+      "palm_target": [
+        0.02,
+        -0.22,
+        0.177
+      ],
+      "grasp": 0.92,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 10.97,
+      "plan_time_s": 3.17,
+      "phase": "lift thermal_tag",
+      "palm_target": [
+        0.02,
+        -0.22,
+        0.187
+      ],
+      "grasp": 0.92,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 11.2,
+      "plan_time_s": 3.24,
+      "phase": "lift thermal_tag",
+      "palm_target": [
+        0.02,
+        -0.22,
+        0.2
+      ],
+      "grasp": 0.92,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 11.43,
+      "plan_time_s": 3.31,
+      "phase": "lift thermal_tag",
+      "palm_target": [
+        0.02,
+        -0.22,
+        0.216
+      ],
+      "grasp": 0.92,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 11.67,
+      "plan_time_s": 3.37,
+      "phase": "lift thermal_tag",
+      "palm_target": [
+        0.02,
+        -0.22,
+        0.233
+      ],
+      "grasp": 0.92,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 11.9,
+      "plan_time_s": 3.44,
+      "phase": "lift thermal_tag",
+      "palm_target": [
+        0.02,
+        -0.22,
+        0.251
+      ],
+      "grasp": 0.92,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 12.13,
+      "plan_time_s": 3.51,
+      "phase": "lift thermal_tag",
+      "palm_target": [
+        0.02,
+        -0.22,
+        0.268
+      ],
+      "grasp": 0.92,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 12.37,
+      "plan_time_s": 3.58,
+      "phase": "lift thermal_tag",
+      "palm_target": [
+        0.02,
+        -0.22,
+        0.283
+      ],
+      "grasp": 0.92,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 12.6,
+      "plan_time_s": 3.64,
+      "phase": "lift thermal_tag",
+      "palm_target": [
+        0.02,
+        -0.22,
+        0.296
+      ],
+      "grasp": 0.92,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 12.83,
+      "plan_time_s": 3.71,
+      "phase": "lift thermal_tag",
+      "palm_target": [
+        0.02,
+        -0.22,
+        0.305
+      ],
+      "grasp": 0.92,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 13.07,
+      "plan_time_s": 3.78,
+      "phase": "lift thermal_tag",
+      "palm_target": [
+        0.02,
+        -0.22,
+        0.31
+      ],
+      "grasp": 0.92,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 13.3,
+      "plan_time_s": 3.85,
+      "phase": "transport thermal_tag",
+      "palm_target": [
+        0.02,
+        -0.218,
+        0.309
+      ],
+      "grasp": 0.92,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 13.53,
+      "plan_time_s": 3.91,
+      "phase": "transport thermal_tag",
+      "palm_target": [
+        0.019,
+        -0.206,
+        0.307
+      ],
+      "grasp": 0.918,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 13.77,
+      "plan_time_s": 3.98,
+      "phase": "transport thermal_tag",
+      "palm_target": [
+        0.019,
+        -0.187,
+        0.303
+      ],
+      "grasp": 0.916,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 14.0,
+      "plan_time_s": 4.05,
+      "phase": "transport thermal_tag",
+      "palm_target": [
+        0.018,
+        -0.16,
+        0.297
+      ],
+      "grasp": 0.913,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 14.23,
+      "plan_time_s": 4.12,
+      "phase": "transport thermal_tag",
+      "palm_target": [
+        0.017,
+        -0.127,
+        0.29
+      ],
+      "grasp": 0.91,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 14.47,
+      "plan_time_s": 4.18,
+      "phase": "transport thermal_tag",
+      "palm_target": [
+        0.015,
+        -0.089,
+        0.282
+      ],
+      "grasp": 0.905,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 14.7,
+      "plan_time_s": 4.25,
+      "phase": "transport thermal_tag",
+      "palm_target": [
+        0.014,
+        -0.048,
+        0.273
+      ],
+      "grasp": 0.901,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 14.93,
+      "plan_time_s": 4.32,
+      "phase": "transport thermal_tag",
+      "palm_target": [
+        0.012,
+        -0.004,
+        0.264
+      ],
+      "grasp": 0.896,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 15.17,
+      "plan_time_s": 4.39,
+      "phase": "transport thermal_tag",
+      "palm_target": [
+        0.01,
+        0.041,
+        0.254
+      ],
+      "grasp": 0.891,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 15.4,
+      "plan_time_s": 4.45,
+      "phase": "transport thermal_tag",
+      "palm_target": [
+        0.009,
+        0.086,
+        0.245
+      ],
+      "grasp": 0.886,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 15.63,
+      "plan_time_s": 4.52,
+      "phase": "transport thermal_tag",
+      "palm_target": [
+        0.007,
+        0.131,
+        0.235
+      ],
+      "grasp": 0.881,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 15.87,
+      "plan_time_s": 4.59,
+      "phase": "transport thermal_tag",
+      "palm_target": [
+        0.005,
+        0.173,
+        0.226
+      ],
+      "grasp": 0.876,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 16.1,
+      "plan_time_s": 4.66,
+      "phase": "transport thermal_tag",
+      "palm_target": [
+        0.004,
+        0.213,
+        0.218
+      ],
+      "grasp": 0.872,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 16.33,
+      "plan_time_s": 4.72,
+      "phase": "transport thermal_tag",
+      "palm_target": [
+        0.003,
+        0.247,
+        0.21
+      ],
+      "grasp": 0.868,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 16.57,
+      "plan_time_s": 4.79,
+      "phase": "transport thermal_tag",
+      "palm_target": [
+        0.002,
+        0.277,
+        0.204
+      ],
+      "grasp": 0.865,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 16.8,
+      "plan_time_s": 4.86,
+      "phase": "transport thermal_tag",
+      "palm_target": [
+        0.001,
+        0.299,
+        0.199
+      ],
+      "grasp": 0.862,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 17.03,
+      "plan_time_s": 4.93,
+      "phase": "transport thermal_tag",
+      "palm_target": [
+        0.0,
+        0.314,
+        0.196
+      ],
+      "grasp": 0.861,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 17.27,
+      "plan_time_s": 4.99,
+      "phase": "transport thermal_tag",
+      "palm_target": [
+        0.0,
+        0.32,
+        0.195
+      ],
+      "grasp": 0.86,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 17.5,
+      "plan_time_s": 5.06,
+      "phase": "place thermal_tag",
+      "palm_target": [
+        0.0,
+        0.32,
+        0.194
+      ],
+      "grasp": 0.853,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 17.73,
+      "plan_time_s": 5.13,
+      "phase": "place thermal_tag",
+      "palm_target": [
+        0.0,
+        0.32,
+        0.191
+      ],
+      "grasp": 0.832,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 17.97,
+      "plan_time_s": 5.2,
+      "phase": "place thermal_tag",
+      "palm_target": [
+        0.0,
+        0.32,
+        0.185
+      ],
+      "grasp": 0.8,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 18.2,
+      "plan_time_s": 5.26,
+      "phase": "place thermal_tag",
+      "palm_target": [
+        0.0,
+        0.32,
+        0.179
+      ],
+      "grasp": 0.761,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 18.43,
+      "plan_time_s": 5.33,
+      "phase": "place thermal_tag",
+      "palm_target": [
+        0.0,
+        0.32,
+        0.172
+      ],
+      "grasp": 0.717,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 18.67,
+      "plan_time_s": 5.4,
+      "phase": "place thermal_tag",
+      "palm_target": [
+        0.0,
+        0.32,
+        0.165
+      ],
+      "grasp": 0.673,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 18.9,
+      "plan_time_s": 5.47,
+      "phase": "place thermal_tag",
+      "palm_target": [
+        0.0,
+        0.32,
+        0.158
+      ],
+      "grasp": 0.63,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 19.13,
+      "plan_time_s": 5.53,
+      "phase": "place thermal_tag",
+      "palm_target": [
+        0.0,
+        0.32,
+        0.152
+      ],
+      "grasp": 0.594,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 19.37,
+      "plan_time_s": 5.6,
+      "phase": "place thermal_tag",
+      "palm_target": [
+        0.0,
+        0.32,
+        0.148
+      ],
+      "grasp": 0.567,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 19.6,
+      "plan_time_s": 5.67,
+      "phase": "place thermal_tag",
+      "palm_target": [
+        0.0,
+        0.32,
+        0.145
+      ],
+      "grasp": 0.552,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 19.83,
+      "plan_time_s": 5.74,
+      "phase": "release thermal_tag",
+      "palm_target": [
+        0.0,
+        0.32,
+        0.146
+      ],
+      "grasp": 0.544,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 20.07,
+      "plan_time_s": 5.8,
+      "phase": "release thermal_tag",
+      "palm_target": [
+        0.0,
+        0.32,
+        0.149
+      ],
+      "grasp": 0.506,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 20.3,
+      "plan_time_s": 5.87,
+      "phase": "release thermal_tag",
+      "palm_target": [
+        0.0,
+        0.32,
+        0.155
+      ],
+      "grasp": 0.441,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 20.53,
+      "plan_time_s": 5.94,
+      "phase": "release thermal_tag",
+      "palm_target": [
+        0.0,
+        0.32,
+        0.162
+      ],
+      "grasp": 0.358,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 20.77,
+      "plan_time_s": 6.01,
+      "phase": "release thermal_tag",
+      "palm_target": [
+        0.0,
+        0.32,
+        0.171
+      ],
+      "grasp": 0.266,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 232.3601,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 21.0,
+      "plan_time_s": 6.07,
+      "phase": "release thermal_tag",
+      "palm_target": [
+        0.0,
+        0.32,
+        0.179
+      ],
+      "grasp": 0.176,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 35.2263
+      }
+    },
+    {
+      "video_time_s": 21.23,
+      "plan_time_s": 6.14,
+      "phase": "release thermal_tag",
+      "palm_target": [
+        0.0,
+        0.32,
+        0.186
+      ],
+      "grasp": 0.095,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 79.8517
+      }
+    },
+    {
+      "video_time_s": 21.47,
+      "plan_time_s": 6.21,
+      "phase": "release thermal_tag",
+      "palm_target": [
+        0.0,
+        0.32,
+        0.192
+      ],
+      "grasp": 0.034,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 21.7,
+      "plan_time_s": 6.28,
+      "phase": "release thermal_tag",
+      "palm_target": [
+        0.0,
+        0.32,
+        0.195
+      ],
+      "grasp": 0.003,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 21.93,
+      "plan_time_s": 6.34,
+      "phase": "approach med_vial",
+      "palm_target": [
+        -0.002,
+        0.316,
+        0.196
+      ],
+      "grasp": 0.0,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 22.17,
+      "plan_time_s": 6.41,
+      "phase": "approach med_vial",
+      "palm_target": [
+        -0.015,
+        0.294,
+        0.199
+      ],
+      "grasp": 0.003,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 22.4,
+      "plan_time_s": 6.48,
+      "phase": "approach med_vial",
+      "palm_target": [
+        -0.036,
+        0.256,
+        0.205
+      ],
+      "grasp": 0.006,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 22.63,
+      "plan_time_s": 6.55,
+      "phase": "approach med_vial",
+      "palm_target": [
+        -0.063,
+        0.207,
+        0.212
+      ],
+      "grasp": 0.011,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 22.87,
+      "plan_time_s": 6.61,
+      "phase": "approach med_vial",
+      "palm_target": [
+        -0.095,
+        0.15,
+        0.221
+      ],
+      "grasp": 0.017,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 23.1,
+      "plan_time_s": 6.68,
+      "phase": "approach med_vial",
+      "palm_target": [
+        -0.13,
+        0.088,
+        0.23
+      ],
+      "grasp": 0.023,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 23.33,
+      "plan_time_s": 6.75,
+      "phase": "approach med_vial",
+      "palm_target": [
+        -0.165,
+        0.025,
+        0.239
+      ],
+      "grasp": 0.03,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 23.57,
+      "plan_time_s": 6.82,
+      "phase": "approach med_vial",
+      "palm_target": [
+        -0.199,
+        -0.036,
+        0.248
+      ],
+      "grasp": 0.036,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 23.8,
+      "plan_time_s": 6.88,
+      "phase": "approach med_vial",
+      "palm_target": [
+        -0.23,
+        -0.09,
+        0.257
+      ],
+      "grasp": 0.041,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 24.03,
+      "plan_time_s": 6.95,
+      "phase": "approach med_vial",
+      "palm_target": [
+        -0.255,
+        -0.135,
+        0.263
+      ],
+      "grasp": 0.045,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 24.27,
+      "plan_time_s": 7.02,
+      "phase": "approach med_vial",
+      "palm_target": [
+        -0.272,
+        -0.166,
+        0.268
+      ],
+      "grasp": 0.049,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 24.5,
+      "plan_time_s": 7.09,
+      "phase": "approach med_vial",
+      "palm_target": [
+        -0.28,
+        -0.18,
+        0.27
+      ],
+      "grasp": 0.05,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 24.73,
+      "plan_time_s": 7.15,
+      "phase": "tactile pre-shape med_vial",
+      "palm_target": [
+        -0.28,
+        -0.18,
+        0.269
+      ],
+      "grasp": 0.055,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 24.97,
+      "plan_time_s": 7.22,
+      "phase": "tactile pre-shape med_vial",
+      "palm_target": [
+        -0.28,
+        -0.18,
+        0.264
+      ],
+      "grasp": 0.074,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 25.2,
+      "plan_time_s": 7.29,
+      "phase": "tactile pre-shape med_vial",
+      "palm_target": [
+        -0.28,
+        -0.18,
+        0.256
+      ],
+      "grasp": 0.104,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 25.43,
+      "plan_time_s": 7.36,
+      "phase": "tactile pre-shape med_vial",
+      "palm_target": [
+        -0.28,
+        -0.18,
+        0.246
+      ],
+      "grasp": 0.141,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 25.67,
+      "plan_time_s": 7.42,
+      "phase": "tactile pre-shape med_vial",
+      "palm_target": [
+        -0.28,
+        -0.18,
+        0.235
+      ],
+      "grasp": 0.183,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 25.9,
+      "plan_time_s": 7.49,
+      "phase": "tactile pre-shape med_vial",
+      "palm_target": [
+        -0.28,
+        -0.18,
+        0.223
+      ],
+      "grasp": 0.226,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 26.13,
+      "plan_time_s": 7.56,
+      "phase": "tactile pre-shape med_vial",
+      "palm_target": [
+        -0.28,
+        -0.18,
+        0.212
+      ],
+      "grasp": 0.268,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 769.5156,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 26.37,
+      "plan_time_s": 7.63,
+      "phase": "tactile pre-shape med_vial",
+      "palm_target": [
+        -0.28,
+        -0.18,
+        0.202
+      ],
+      "grasp": 0.304,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 26.6,
+      "plan_time_s": 7.69,
+      "phase": "tactile pre-shape med_vial",
+      "palm_target": [
+        -0.28,
+        -0.18,
+        0.195
+      ],
+      "grasp": 0.331,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 26.83,
+      "plan_time_s": 7.76,
+      "phase": "tactile pre-shape med_vial",
+      "palm_target": [
+        -0.28,
+        -0.18,
+        0.191
+      ],
+      "grasp": 0.347,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 27.07,
+      "plan_time_s": 7.83,
+      "phase": "closed-loop grasp med_vial",
+      "palm_target": [
+        -0.28,
+        -0.18,
+        0.19
+      ],
+      "grasp": 0.353,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 27.3,
+      "plan_time_s": 7.9,
+      "phase": "closed-loop grasp med_vial",
+      "palm_target": [
+        -0.28,
+        -0.18,
+        0.19
+      ],
+      "grasp": 0.379,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 27.53,
+      "plan_time_s": 7.96,
+      "phase": "closed-loop grasp med_vial",
+      "palm_target": [
+        -0.28,
+        -0.18,
+        0.19
+      ],
+      "grasp": 0.429,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 27.77,
+      "plan_time_s": 8.03,
+      "phase": "closed-loop grasp med_vial",
+      "palm_target": [
+        -0.28,
+        -0.18,
+        0.19
+      ],
+      "grasp": 0.495,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 28.0,
+      "plan_time_s": 8.1,
+      "phase": "closed-loop grasp med_vial",
+      "palm_target": [
+        -0.28,
+        -0.18,
+        0.19
+      ],
+      "grasp": 0.573,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 28.23,
+      "plan_time_s": 8.17,
+      "phase": "closed-loop grasp med_vial",
+      "palm_target": [
+        -0.28,
+        -0.18,
+        0.19
+      ],
+      "grasp": 0.654,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 28.47,
+      "plan_time_s": 8.23,
+      "phase": "closed-loop grasp med_vial",
+      "palm_target": [
+        -0.28,
+        -0.18,
+        0.19
+      ],
+      "grasp": 0.735,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 28.7,
+      "plan_time_s": 8.3,
+      "phase": "closed-loop grasp med_vial",
+      "palm_target": [
+        -0.28,
+        -0.18,
+        0.19
+      ],
+      "grasp": 0.808,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 28.93,
+      "plan_time_s": 8.37,
+      "phase": "closed-loop grasp med_vial",
+      "palm_target": [
+        -0.28,
+        -0.18,
+        0.19
+      ],
+      "grasp": 0.867,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 29.17,
+      "plan_time_s": 8.44,
+      "phase": "closed-loop grasp med_vial",
+      "palm_target": [
+        -0.28,
+        -0.18,
+        0.19
+      ],
+      "grasp": 0.907,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 29.4,
+      "plan_time_s": 8.5,
+      "phase": "lift med_vial",
+      "palm_target": [
+        -0.28,
+        -0.18,
+        0.19
+      ],
+      "grasp": 0.92,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 29.63,
+      "plan_time_s": 8.57,
+      "phase": "lift med_vial",
+      "palm_target": [
+        -0.28,
+        -0.18,
+        0.193
+      ],
+      "grasp": 0.92,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 29.87,
+      "plan_time_s": 8.64,
+      "phase": "lift med_vial",
+      "palm_target": [
+        -0.28,
+        -0.18,
+        0.201
+      ],
+      "grasp": 0.92,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 30.1,
+      "plan_time_s": 8.71,
+      "phase": "lift med_vial",
+      "palm_target": [
+        -0.28,
+        -0.18,
+        0.213
+      ],
+      "grasp": 0.92,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 30.33,
+      "plan_time_s": 8.77,
+      "phase": "lift med_vial",
+      "palm_target": [
+        -0.28,
+        -0.18,
+        0.228
+      ],
+      "grasp": 0.92,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 30.57,
+      "plan_time_s": 8.84,
+      "phase": "lift med_vial",
+      "palm_target": [
+        -0.28,
+        -0.18,
+        0.245
+      ],
+      "grasp": 0.92,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 30.8,
+      "plan_time_s": 8.91,
+      "phase": "lift med_vial",
+      "palm_target": [
+        -0.28,
+        -0.18,
+        0.262
+      ],
+      "grasp": 0.92,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 31.03,
+      "plan_time_s": 8.98,
+      "phase": "lift med_vial",
+      "palm_target": [
+        -0.28,
+        -0.18,
+        0.28
+      ],
+      "grasp": 0.92,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 31.27,
+      "plan_time_s": 9.04,
+      "phase": "lift med_vial",
+      "palm_target": [
+        -0.28,
+        -0.18,
+        0.296
+      ],
+      "grasp": 0.92,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 31.5,
+      "plan_time_s": 9.11,
+      "phase": "lift med_vial",
+      "palm_target": [
+        -0.28,
+        -0.18,
+        0.31
+      ],
+      "grasp": 0.92,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 31.73,
+      "plan_time_s": 9.18,
+      "phase": "lift med_vial",
+      "palm_target": [
+        -0.28,
+        -0.18,
+        0.321
+      ],
+      "grasp": 0.92,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 31.97,
+      "plan_time_s": 9.25,
+      "phase": "lift med_vial",
+      "palm_target": [
+        -0.28,
+        -0.18,
+        0.328
+      ],
+      "grasp": 0.92,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 32.2,
+      "plan_time_s": 9.31,
+      "phase": "transport med_vial",
+      "palm_target": [
+        -0.28,
+        -0.18,
+        0.33
+      ],
+      "grasp": 0.92,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 32.43,
+      "plan_time_s": 9.38,
+      "phase": "transport med_vial",
+      "palm_target": [
+        -0.271,
+        -0.174,
+        0.329
+      ],
+      "grasp": 0.919,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 32.67,
+      "plan_time_s": 9.45,
+      "phase": "transport med_vial",
+      "palm_target": [
+        -0.251,
+        -0.16,
+        0.325
+      ],
+      "grasp": 0.917,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 32.9,
+      "plan_time_s": 9.52,
+      "phase": "transport med_vial",
+      "palm_target": [
+        -0.22,
+        -0.139,
+        0.32
+      ],
+      "grasp": 0.915,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 33.13,
+      "plan_time_s": 9.58,
+      "phase": "transport med_vial",
+      "palm_target": [
+        -0.181,
+        -0.112,
+        0.314
+      ],
+      "grasp": 0.912,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 33.37,
+      "plan_time_s": 9.65,
+      "phase": "transport med_vial",
+      "palm_target": [
+        -0.136,
+        -0.081,
+        0.306
+      ],
+      "grasp": 0.908,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 33.6,
+      "plan_time_s": 9.72,
+      "phase": "transport med_vial",
+      "palm_target": [
+        -0.084,
+        -0.046,
+        0.298
+      ],
+      "grasp": 0.903,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 33.83,
+      "plan_time_s": 9.79,
+      "phase": "transport med_vial",
+      "palm_target": [
+        -0.029,
+        -0.008,
+        0.289
+      ],
+      "grasp": 0.898,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 34.07,
+      "plan_time_s": 9.85,
+      "phase": "transport med_vial",
+      "palm_target": [
+        0.029,
+        0.032,
+        0.279
+      ],
+      "grasp": 0.894,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 34.3,
+      "plan_time_s": 9.92,
+      "phase": "transport med_vial",
+      "palm_target": [
+        0.088,
+        0.072,
+        0.27
+      ],
+      "grasp": 0.888,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 34.53,
+      "plan_time_s": 9.99,
+      "phase": "transport med_vial",
+      "palm_target": [
+        0.147,
+        0.112,
+        0.26
+      ],
+      "grasp": 0.883,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 34.77,
+      "plan_time_s": 10.06,
+      "phase": "transport med_vial",
+      "palm_target": [
+        0.203,
+        0.151,
+        0.251
+      ],
+      "grasp": 0.879,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 35.0,
+      "plan_time_s": 10.12,
+      "phase": "transport med_vial",
+      "palm_target": [
+        0.256,
+        0.188,
+        0.242
+      ],
+      "grasp": 0.874,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 35.23,
+      "plan_time_s": 10.19,
+      "phase": "transport med_vial",
+      "palm_target": [
+        0.304,
+        0.221,
+        0.234
+      ],
+      "grasp": 0.87,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 35.47,
+      "plan_time_s": 10.26,
+      "phase": "transport med_vial",
+      "palm_target": [
+        0.346,
+        0.249,
+        0.227
+      ],
+      "grasp": 0.866,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 35.7,
+      "plan_time_s": 10.33,
+      "phase": "transport med_vial",
+      "palm_target": [
+        0.38,
+        0.273,
+        0.222
+      ],
+      "grasp": 0.863,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 35.93,
+      "plan_time_s": 10.39,
+      "phase": "transport med_vial",
+      "palm_target": [
+        0.404,
+        0.289,
+        0.218
+      ],
+      "grasp": 0.861,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 36.17,
+      "plan_time_s": 10.46,
+      "phase": "transport med_vial",
+      "palm_target": [
+        0.418,
+        0.298,
+        0.215
+      ],
+      "grasp": 0.86,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 36.4,
+      "plan_time_s": 10.53,
+      "phase": "place med_vial",
+      "palm_target": [
+        0.42,
+        0.3,
+        0.215
+      ],
+      "grasp": 0.859,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 36.63,
+      "plan_time_s": 10.6,
+      "phase": "place med_vial",
+      "palm_target": [
+        0.42,
+        0.3,
+        0.212
+      ],
+      "grasp": 0.844,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 36.87,
+      "plan_time_s": 10.66,
+      "phase": "place med_vial",
+      "palm_target": [
+        0.42,
+        0.3,
+        0.208
+      ],
+      "grasp": 0.817,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 37.1,
+      "plan_time_s": 10.73,
+      "phase": "place med_vial",
+      "palm_target": [
+        0.42,
+        0.3,
+        0.202
+      ],
+      "grasp": 0.781,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 37.33,
+      "plan_time_s": 10.8,
+      "phase": "place med_vial",
+      "palm_target": [
+        0.42,
+        0.3,
+        0.196
+      ],
+      "grasp": 0.739,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 37.57,
+      "plan_time_s": 10.87,
+      "phase": "place med_vial",
+      "palm_target": [
+        0.42,
+        0.3,
+        0.188
+      ],
+      "grasp": 0.695,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 37.8,
+      "plan_time_s": 10.93,
+      "phase": "place med_vial",
+      "palm_target": [
+        0.42,
+        0.3,
+        0.181
+      ],
+      "grasp": 0.651,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 38.03,
+      "plan_time_s": 11.0,
+      "phase": "place med_vial",
+      "palm_target": [
+        0.42,
+        0.3,
+        0.175
+      ],
+      "grasp": 0.611,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 38.27,
+      "plan_time_s": 11.07,
+      "phase": "place med_vial",
+      "palm_target": [
+        0.42,
+        0.3,
+        0.17
+      ],
+      "grasp": 0.579,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 38.5,
+      "plan_time_s": 11.14,
+      "phase": "place med_vial",
+      "palm_target": [
+        0.42,
+        0.3,
+        0.166
+      ],
+      "grasp": 0.557,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 38.73,
+      "plan_time_s": 11.2,
+      "phase": "release med_vial",
+      "palm_target": [
+        0.42,
+        0.3,
+        0.165
+      ],
+      "grasp": 0.55,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 38.97,
+      "plan_time_s": 11.27,
+      "phase": "release med_vial",
+      "palm_target": [
+        0.42,
+        0.3,
+        0.167
+      ],
+      "grasp": 0.529,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 39.2,
+      "plan_time_s": 11.34,
+      "phase": "release med_vial",
+      "palm_target": [
+        0.42,
+        0.3,
+        0.172
+      ],
+      "grasp": 0.476,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 39.43,
+      "plan_time_s": 11.41,
+      "phase": "release med_vial",
+      "palm_target": [
+        0.42,
+        0.3,
+        0.179
+      ],
+      "grasp": 0.401,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 39.67,
+      "plan_time_s": 11.47,
+      "phase": "release med_vial",
+      "palm_target": [
+        0.42,
+        0.3,
+        0.187
+      ],
+      "grasp": 0.312,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 39.9,
+      "plan_time_s": 11.54,
+      "phase": "release med_vial",
+      "palm_target": [
+        0.42,
+        0.3,
+        0.195
+      ],
+      "grasp": 0.22,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 40.13,
+      "plan_time_s": 11.61,
+      "phase": "release med_vial",
+      "palm_target": [
+        0.42,
+        0.3,
+        0.203
+      ],
+      "grasp": 0.133,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 40.37,
+      "plan_time_s": 11.68,
+      "phase": "release med_vial",
+      "palm_target": [
+        0.42,
+        0.3,
+        0.209
+      ],
+      "grasp": 0.061,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 40.6,
+      "plan_time_s": 11.74,
+      "phase": "release med_vial",
+      "palm_target": [
+        0.42,
+        0.3,
+        0.214
+      ],
+      "grasp": 0.014,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 40.83,
+      "plan_time_s": 11.81,
+      "phase": "approach salvage_key",
+      "palm_target": [
+        0.42,
+        0.3,
+        0.215
+      ],
+      "grasp": 0.0,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 41.07,
+      "plan_time_s": 11.88,
+      "phase": "approach salvage_key",
+      "palm_target": [
+        0.417,
+        0.288,
+        0.216
+      ],
+      "grasp": 0.001,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 41.3,
+      "plan_time_s": 11.95,
+      "phase": "approach salvage_key",
+      "palm_target": [
+        0.41,
+        0.259,
+        0.218
+      ],
+      "grasp": 0.004,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 41.53,
+      "plan_time_s": 12.01,
+      "phase": "approach salvage_key",
+      "palm_target": [
+        0.399,
+        0.218,
+        0.221
+      ],
+      "grasp": 0.009,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 41.77,
+      "plan_time_s": 12.08,
+      "phase": "approach salvage_key",
+      "palm_target": [
+        0.386,
+        0.167,
+        0.225
+      ],
+      "grasp": 0.014,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 94.9581,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 42.0,
+      "plan_time_s": 12.15,
+      "phase": "approach salvage_key",
+      "palm_target": [
+        0.372,
+        0.111,
+        0.229
+      ],
+      "grasp": 0.02,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 42.23,
+      "plan_time_s": 12.22,
+      "phase": "approach salvage_key",
+      "palm_target": [
+        0.357,
+        0.052,
+        0.233
+      ],
+      "grasp": 0.026,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 42.47,
+      "plan_time_s": 12.28,
+      "phase": "approach salvage_key",
+      "palm_target": [
+        0.342,
+        -0.007,
+        0.238
+      ],
+      "grasp": 0.033,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 42.7,
+      "plan_time_s": 12.35,
+      "phase": "approach salvage_key",
+      "palm_target": [
+        0.328,
+        -0.061,
+        0.242
+      ],
+      "grasp": 0.038,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 42.93,
+      "plan_time_s": 12.42,
+      "phase": "approach salvage_key",
+      "palm_target": [
+        0.316,
+        -0.108,
+        0.245
+      ],
+      "grasp": 0.043,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 43.17,
+      "plan_time_s": 12.49,
+      "phase": "approach salvage_key",
+      "palm_target": [
+        0.307,
+        -0.144,
+        0.248
+      ],
+      "grasp": 0.047,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 43.4,
+      "plan_time_s": 12.55,
+      "phase": "approach salvage_key",
+      "palm_target": [
+        0.301,
+        -0.165,
+        0.25
+      ],
+      "grasp": 0.049,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 43.63,
+      "plan_time_s": 12.62,
+      "phase": "tactile pre-shape salvage_key",
+      "palm_target": [
+        0.3,
+        -0.17,
+        0.25
+      ],
+      "grasp": 0.051,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 1889.0993,
+        "ring_touch_force": 468.5026,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 43.87,
+      "plan_time_s": 12.69,
+      "phase": "tactile pre-shape salvage_key",
+      "palm_target": [
+        0.3,
+        -0.17,
+        0.247
+      ],
+      "grasp": 0.063,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 44.1,
+      "plan_time_s": 12.76,
+      "phase": "tactile pre-shape salvage_key",
+      "palm_target": [
+        0.3,
+        -0.17,
+        0.24
+      ],
+      "grasp": 0.088,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 44.33,
+      "plan_time_s": 12.82,
+      "phase": "tactile pre-shape salvage_key",
+      "palm_target": [
+        0.3,
+        -0.17,
+        0.231
+      ],
+      "grasp": 0.122,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 212.4566,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 44.57,
+      "plan_time_s": 12.89,
+      "phase": "tactile pre-shape salvage_key",
+      "palm_target": [
+        0.3,
+        -0.17,
+        0.22
+      ],
+      "grasp": 0.162,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 44.8,
+      "plan_time_s": 12.96,
+      "phase": "tactile pre-shape salvage_key",
+      "palm_target": [
+        0.3,
+        -0.17,
+        0.209
+      ],
+      "grasp": 0.205,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 45.03,
+      "plan_time_s": 13.03,
+      "phase": "tactile pre-shape salvage_key",
+      "palm_target": [
+        0.3,
+        -0.17,
+        0.197
+      ],
+      "grasp": 0.247,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 16.8586,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 45.27,
+      "plan_time_s": 13.09,
+      "phase": "tactile pre-shape salvage_key",
+      "palm_target": [
+        0.3,
+        -0.17,
+        0.187
+      ],
+      "grasp": 0.287,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 45.5,
+      "plan_time_s": 13.16,
+      "phase": "tactile pre-shape salvage_key",
+      "palm_target": [
+        0.3,
+        -0.17,
+        0.178
+      ],
+      "grasp": 0.319,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 45.73,
+      "plan_time_s": 13.23,
+      "phase": "tactile pre-shape salvage_key",
+      "palm_target": [
+        0.3,
+        -0.17,
+        0.172
+      ],
+      "grasp": 0.341,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 45.97,
+      "plan_time_s": 13.29,
+      "phase": "tactile pre-shape salvage_key",
+      "palm_target": [
+        0.3,
+        -0.17,
+        0.17
+      ],
+      "grasp": 0.35,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 46.2,
+      "plan_time_s": 13.36,
+      "phase": "closed-loop grasp salvage_key",
+      "palm_target": [
+        0.3,
+        -0.17,
+        0.17
+      ],
+      "grasp": 0.363,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 46.43,
+      "plan_time_s": 13.43,
+      "phase": "closed-loop grasp salvage_key",
+      "palm_target": [
+        0.3,
+        -0.17,
+        0.17
+      ],
+      "grasp": 0.402,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 223.8417,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 46.67,
+      "plan_time_s": 13.5,
+      "phase": "closed-loop grasp salvage_key",
+      "palm_target": [
+        0.3,
+        -0.17,
+        0.17
+      ],
+      "grasp": 0.46,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 46.9,
+      "plan_time_s": 13.56,
+      "phase": "closed-loop grasp salvage_key",
+      "palm_target": [
+        0.3,
+        -0.17,
+        0.17
+      ],
+      "grasp": 0.533,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 1666.4094,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 47.13,
+      "plan_time_s": 13.63,
+      "phase": "closed-loop grasp salvage_key",
+      "palm_target": [
+        0.3,
+        -0.17,
+        0.17
+      ],
+      "grasp": 0.614,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 47.37,
+      "plan_time_s": 13.7,
+      "phase": "closed-loop grasp salvage_key",
+      "palm_target": [
+        0.3,
+        -0.17,
+        0.17
+      ],
+      "grasp": 0.696,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 47.6,
+      "plan_time_s": 13.77,
+      "phase": "closed-loop grasp salvage_key",
+      "palm_target": [
+        0.3,
+        -0.17,
+        0.17
+      ],
+      "grasp": 0.773,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 47.83,
+      "plan_time_s": 13.83,
+      "phase": "closed-loop grasp salvage_key",
+      "palm_target": [
+        0.3,
+        -0.17,
+        0.17
+      ],
+      "grasp": 0.84,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 48.07,
+      "plan_time_s": 13.9,
+      "phase": "closed-loop grasp salvage_key",
+      "palm_target": [
+        0.3,
+        -0.17,
+        0.17
+      ],
+      "grasp": 0.89,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 48.3,
+      "plan_time_s": 13.97,
+      "phase": "closed-loop grasp salvage_key",
+      "palm_target": [
+        0.3,
+        -0.17,
+        0.17
+      ],
+      "grasp": 0.917,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 0.0
+      }
+    },
+    {
+      "video_time_s": 48.53,
+      "plan_time_s": 14.04,
+      "phase": "lift salvage_key",
+      "palm_target": [
+        0.3,
+        -0.17,
+        0.171
+      ],
+      "grasp": 0.92,
+      "sensor_norms": {
+        "thumb_touch_force": 0.0,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 0.0,
+        "little_touch_force": 59.2276
+      }
+    },
+    {
+      "video_time_s": 48.77,
+      "plan_time_s": 14.1,
+      "phase": "lift salvage_key",
+      "palm_target": [
+        0.3,
+        -0.17,
+        0.177
+      ],
+      "grasp": 0.92,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2013.3046,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 49.0,
+      "plan_time_s": 14.17,
+      "phase": "lift salvage_key",
+      "palm_target": [
+        0.3,
+        -0.17,
+        0.187
+      ],
+      "grasp": 0.92,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2384.9223,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 49.23,
+      "plan_time_s": 14.24,
+      "phase": "lift salvage_key",
+      "palm_target": [
+        0.3,
+        -0.17,
+        0.2
+      ],
+      "grasp": 0.92,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2376.1419,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 49.47,
+      "plan_time_s": 14.31,
+      "phase": "lift salvage_key",
+      "palm_target": [
+        0.3,
+        -0.17,
+        0.216
+      ],
+      "grasp": 0.92,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2391.323,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 49.7,
+      "plan_time_s": 14.37,
+      "phase": "lift salvage_key",
+      "palm_target": [
+        0.3,
+        -0.17,
+        0.233
+      ],
+      "grasp": 0.92,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2396.0354,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 49.93,
+      "plan_time_s": 14.44,
+      "phase": "lift salvage_key",
+      "palm_target": [
+        0.3,
+        -0.17,
+        0.251
+      ],
+      "grasp": 0.92,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2385.0074,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 50.17,
+      "plan_time_s": 14.51,
+      "phase": "lift salvage_key",
+      "palm_target": [
+        0.3,
+        -0.17,
+        0.268
+      ],
+      "grasp": 0.92,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2222.918,
+        "middle_touch_force": 1027.1033,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 50.4,
+      "plan_time_s": 14.58,
+      "phase": "lift salvage_key",
+      "palm_target": [
+        0.3,
+        -0.17,
+        0.283
+      ],
+      "grasp": 0.92,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2230.02,
+        "middle_touch_force": 1073.4907,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 50.63,
+      "plan_time_s": 14.64,
+      "phase": "lift salvage_key",
+      "palm_target": [
+        0.3,
+        -0.17,
+        0.296
+      ],
+      "grasp": 0.92,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2459.2148,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 50.87,
+      "plan_time_s": 14.71,
+      "phase": "lift salvage_key",
+      "palm_target": [
+        0.3,
+        -0.17,
+        0.305
+      ],
+      "grasp": 0.92,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2414.3376,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 51.1,
+      "plan_time_s": 14.78,
+      "phase": "lift salvage_key",
+      "palm_target": [
+        0.3,
+        -0.17,
+        0.31
+      ],
+      "grasp": 0.92,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2401.8988,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 51.33,
+      "plan_time_s": 14.85,
+      "phase": "transport salvage_key",
+      "palm_target": [
+        0.297,
+        -0.168,
+        0.31
+      ],
+      "grasp": 0.92,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2257.8384,
+        "middle_touch_force": 1032.2574,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 51.57,
+      "plan_time_s": 14.91,
+      "phase": "transport salvage_key",
+      "palm_target": [
+        0.282,
+        -0.158,
+        0.307
+      ],
+      "grasp": 0.918,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2460.3642,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 51.8,
+      "plan_time_s": 14.98,
+      "phase": "transport salvage_key",
+      "palm_target": [
+        0.255,
+        -0.141,
+        0.303
+      ],
+      "grasp": 0.916,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2465.6186,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 52.03,
+      "plan_time_s": 15.05,
+      "phase": "transport salvage_key",
+      "palm_target": [
+        0.219,
+        -0.117,
+        0.298
+      ],
+      "grasp": 0.913,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2469.8679,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 52.27,
+      "plan_time_s": 15.12,
+      "phase": "transport salvage_key",
+      "palm_target": [
+        0.176,
+        -0.089,
+        0.291
+      ],
+      "grasp": 0.91,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2481.9419,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 52.5,
+      "plan_time_s": 15.18,
+      "phase": "transport salvage_key",
+      "palm_target": [
+        0.126,
+        -0.056,
+        0.283
+      ],
+      "grasp": 0.905,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2477.1371,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 52.73,
+      "plan_time_s": 15.25,
+      "phase": "transport salvage_key",
+      "palm_target": [
+        0.07,
+        -0.02,
+        0.275
+      ],
+      "grasp": 0.901,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2502.9496,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 52.97,
+      "plan_time_s": 15.32,
+      "phase": "transport salvage_key",
+      "palm_target": [
+        0.012,
+        0.018,
+        0.266
+      ],
+      "grasp": 0.896,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2292.7949,
+        "middle_touch_force": 946.084,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 53.2,
+      "plan_time_s": 15.39,
+      "phase": "transport salvage_key",
+      "palm_target": [
+        -0.048,
+        0.057,
+        0.257
+      ],
+      "grasp": 0.891,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2511.414,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 53.43,
+      "plan_time_s": 15.45,
+      "phase": "transport salvage_key",
+      "palm_target": [
+        -0.109,
+        0.097,
+        0.248
+      ],
+      "grasp": 0.886,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2440.2037,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 53.67,
+      "plan_time_s": 15.52,
+      "phase": "transport salvage_key",
+      "palm_target": [
+        -0.168,
+        0.136,
+        0.238
+      ],
+      "grasp": 0.881,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2472.8675,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 53.9,
+      "plan_time_s": 15.59,
+      "phase": "transport salvage_key",
+      "palm_target": [
+        -0.225,
+        0.173,
+        0.23
+      ],
+      "grasp": 0.876,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 54.13,
+      "plan_time_s": 15.66,
+      "phase": "transport salvage_key",
+      "palm_target": [
+        -0.277,
+        0.207,
+        0.222
+      ],
+      "grasp": 0.872,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2288.1168,
+        "middle_touch_force": 1074.2279,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 54.37,
+      "plan_time_s": 15.72,
+      "phase": "transport salvage_key",
+      "palm_target": [
+        -0.324,
+        0.237,
+        0.215
+      ],
+      "grasp": 0.868,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2444.6078,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 1007.1371
+      }
+    },
+    {
+      "video_time_s": 54.6,
+      "plan_time_s": 15.79,
+      "phase": "transport salvage_key",
+      "palm_target": [
+        -0.363,
+        0.263,
+        0.209
+      ],
+      "grasp": 0.865,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2223.9119,
+        "middle_touch_force": 1101.6363,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 925.4785
+      }
+    },
+    {
+      "video_time_s": 54.83,
+      "plan_time_s": 15.86,
+      "phase": "transport salvage_key",
+      "palm_target": [
+        -0.393,
+        0.282,
+        0.204
+      ],
+      "grasp": 0.862,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2480.1674,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 55.07,
+      "plan_time_s": 15.93,
+      "phase": "transport salvage_key",
+      "palm_target": [
+        -0.412,
+        0.295,
+        0.201
+      ],
+      "grasp": 0.861,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2290.5937,
+        "middle_touch_force": 942.9444,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 55.3,
+      "plan_time_s": 15.99,
+      "phase": "transport salvage_key",
+      "palm_target": [
+        -0.42,
+        0.3,
+        0.2
+      ],
+      "grasp": 0.86,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 55.53,
+      "plan_time_s": 16.06,
+      "phase": "place salvage_key",
+      "palm_target": [
+        -0.42,
+        0.3,
+        0.199
+      ],
+      "grasp": 0.853,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2288.8158,
+        "middle_touch_force": 1099.1359,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 55.77,
+      "plan_time_s": 16.13,
+      "phase": "place salvage_key",
+      "palm_target": [
+        -0.42,
+        0.3,
+        0.196
+      ],
+      "grasp": 0.832,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2254.8181,
+        "middle_touch_force": 1151.4627,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 56.0,
+      "plan_time_s": 16.2,
+      "phase": "place salvage_key",
+      "palm_target": [
+        -0.42,
+        0.3,
+        0.19
+      ],
+      "grasp": 0.8,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2325.749,
+        "middle_touch_force": 1157.9205,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 56.23,
+      "plan_time_s": 16.26,
+      "phase": "place salvage_key",
+      "palm_target": [
+        -0.42,
+        0.3,
+        0.184
+      ],
+      "grasp": 0.761,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2305.498,
+        "middle_touch_force": 1249.6692,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 56.47,
+      "plan_time_s": 16.33,
+      "phase": "place salvage_key",
+      "palm_target": [
+        -0.42,
+        0.3,
+        0.177
+      ],
+      "grasp": 0.717,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 56.7,
+      "plan_time_s": 16.4,
+      "phase": "place salvage_key",
+      "palm_target": [
+        -0.42,
+        0.3,
+        0.17
+      ],
+      "grasp": 0.672,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2718.1375,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 56.93,
+      "plan_time_s": 16.47,
+      "phase": "place salvage_key",
+      "palm_target": [
+        -0.42,
+        0.3,
+        0.163
+      ],
+      "grasp": 0.63,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2766.2886,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 57.17,
+      "plan_time_s": 16.53,
+      "phase": "place salvage_key",
+      "palm_target": [
+        -0.42,
+        0.3,
+        0.157
+      ],
+      "grasp": 0.594,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2474.731,
+        "middle_touch_force": 1434.1677,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 1177.3977
+      }
+    },
+    {
+      "video_time_s": 57.4,
+      "plan_time_s": 16.6,
+      "phase": "place salvage_key",
+      "palm_target": [
+        -0.42,
+        0.3,
+        0.153
+      ],
+      "grasp": 0.567,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2601.6123,
+        "middle_touch_force": 1579.0446,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 57.63,
+      "plan_time_s": 16.67,
+      "phase": "place salvage_key",
+      "palm_target": [
+        -0.42,
+        0.3,
+        0.15
+      ],
+      "grasp": 0.552,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2636.2368,
+        "middle_touch_force": 1398.3569,
+        "ring_touch_force": 945.0182,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 57.87,
+      "plan_time_s": 16.74,
+      "phase": "release salvage_key",
+      "palm_target": [
+        -0.42,
+        0.3,
+        0.151
+      ],
+      "grasp": 0.544,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2939.3651,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 58.1,
+      "plan_time_s": 16.8,
+      "phase": "release salvage_key",
+      "palm_target": [
+        -0.42,
+        0.3,
+        0.154
+      ],
+      "grasp": 0.506,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2677.1878,
+        "middle_touch_force": 1163.5969,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 58.33,
+      "plan_time_s": 16.87,
+      "phase": "release salvage_key",
+      "palm_target": [
+        -0.42,
+        0.3,
+        0.16
+      ],
+      "grasp": 0.441,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2724.3757,
+        "middle_touch_force": 1797.2703,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 58.57,
+      "plan_time_s": 16.94,
+      "phase": "release salvage_key",
+      "palm_target": [
+        -0.42,
+        0.3,
+        0.168
+      ],
+      "grasp": 0.357,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2843.3181,
+        "middle_touch_force": 1781.4459,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 58.8,
+      "plan_time_s": 17.01,
+      "phase": "release salvage_key",
+      "palm_target": [
+        -0.42,
+        0.3,
+        0.176
+      ],
+      "grasp": 0.266,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2869.6339,
+        "middle_touch_force": 1957.0796,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 59.03,
+      "plan_time_s": 17.07,
+      "phase": "release salvage_key",
+      "palm_target": [
+        -0.42,
+        0.3,
+        0.184
+      ],
+      "grasp": 0.175,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2884.4283,
+        "middle_touch_force": 1725.8656,
+        "ring_touch_force": 1439.57,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 59.27,
+      "plan_time_s": 17.14,
+      "phase": "release salvage_key",
+      "palm_target": [
+        -0.42,
+        0.3,
+        0.191
+      ],
+      "grasp": 0.095,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2655.0318,
+        "middle_touch_force": 2247.307,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 59.5,
+      "plan_time_s": 17.21,
+      "phase": "release salvage_key",
+      "palm_target": [
+        -0.42,
+        0.3,
+        0.197
+      ],
+      "grasp": 0.034,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2948.5189,
+        "middle_touch_force": 2267.7942,
+        "ring_touch_force": 1427.9406,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 59.73,
+      "plan_time_s": 17.28,
+      "phase": "release salvage_key",
+      "palm_target": [
+        -0.42,
+        0.3,
+        0.2
+      ],
+      "grasp": 0.002,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2842.7042,
+        "middle_touch_force": 2237.5107,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 59.97,
+      "plan_time_s": 17.34,
+      "phase": "final inspection",
+      "palm_target": [
+        -0.419,
+        0.299,
+        0.2
+      ],
+      "grasp": 0.0,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2926.7397,
+        "middle_touch_force": 2045.9457,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 60.2,
+      "plan_time_s": 17.41,
+      "phase": "final inspection",
+      "palm_target": [
+        -0.413,
+        0.297,
+        0.202
+      ],
+      "grasp": 0.0,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 0.0,
+        "middle_touch_force": 2337.3085,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 1885.5657
+      }
+    },
+    {
+      "video_time_s": 60.43,
+      "plan_time_s": 17.48,
+      "phase": "final inspection",
+      "palm_target": [
+        -0.403,
+        0.292,
+        0.206
+      ],
+      "grasp": 0.0,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2875.0392,
+        "middle_touch_force": 2274.3269,
+        "ring_touch_force": 1435.7096,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 60.67,
+      "plan_time_s": 17.55,
+      "phase": "final inspection",
+      "palm_target": [
+        -0.39,
+        0.286,
+        0.21
+      ],
+      "grasp": 0.0,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2884.1965,
+        "middle_touch_force": 2045.979,
+        "ring_touch_force": 1451.1766,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 60.9,
+      "plan_time_s": 17.61,
+      "phase": "final inspection",
+      "palm_target": [
+        -0.372,
+        0.277,
+        0.216
+      ],
+      "grasp": 0.0,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2961.0009,
+        "middle_touch_force": 1562.5138,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 61.13,
+      "plan_time_s": 17.68,
+      "phase": "final inspection",
+      "palm_target": [
+        -0.352,
+        0.268,
+        0.223
+      ],
+      "grasp": 0.0,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 3058.0634,
+        "middle_touch_force": 2274.7596,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 61.37,
+      "plan_time_s": 17.75,
+      "phase": "final inspection",
+      "palm_target": [
+        -0.33,
+        0.257,
+        0.23
+      ],
+      "grasp": 0.0,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2868.7177,
+        "middle_touch_force": 2237.4741,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 61.6,
+      "plan_time_s": 17.82,
+      "phase": "final inspection",
+      "palm_target": [
+        -0.305,
+        0.245,
+        0.238
+      ],
+      "grasp": 0.0,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2920.7308,
+        "middle_touch_force": 2043.0657,
+        "ring_touch_force": 1444.8979,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 61.83,
+      "plan_time_s": 17.88,
+      "phase": "final inspection",
+      "palm_target": [
+        -0.279,
+        0.233,
+        0.247
+      ],
+      "grasp": 0.0,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2964.4861,
+        "middle_touch_force": 1563.1357,
+        "ring_touch_force": 1485.9286,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 62.07,
+      "plan_time_s": 17.95,
+      "phase": "final inspection",
+      "palm_target": [
+        -0.251,
+        0.22,
+        0.256
+      ],
+      "grasp": 0.0,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2921.3813,
+        "middle_touch_force": 2263.4521,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 62.3,
+      "plan_time_s": 18.02,
+      "phase": "final inspection",
+      "palm_target": [
+        -0.223,
+        0.206,
+        0.266
+      ],
+      "grasp": 0.0,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2911.3607,
+        "middle_touch_force": 2265.981,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 62.53,
+      "plan_time_s": 18.09,
+      "phase": "final inspection",
+      "palm_target": [
+        -0.195,
+        0.193,
+        0.275
+      ],
+      "grasp": 0.0,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 3017.8912,
+        "middle_touch_force": 2223.5857,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 62.77,
+      "plan_time_s": 18.15,
+      "phase": "final inspection",
+      "palm_target": [
+        -0.167,
+        0.179,
+        0.284
+      ],
+      "grasp": 0.0,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2864.4661,
+        "middle_touch_force": 2048.0065,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 63.0,
+      "plan_time_s": 18.22,
+      "phase": "final inspection",
+      "palm_target": [
+        -0.139,
+        0.166,
+        0.294
+      ],
+      "grasp": 0.0,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 3214.9613,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 1577.3246,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 63.23,
+      "plan_time_s": 18.29,
+      "phase": "final inspection",
+      "palm_target": [
+        -0.113,
+        0.154,
+        0.302
+      ],
+      "grasp": 0.0,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2931.9087,
+        "middle_touch_force": 2267.5612,
+        "ring_touch_force": 1409.5864,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 63.47,
+      "plan_time_s": 18.36,
+      "phase": "final inspection",
+      "palm_target": [
+        -0.088,
+        0.142,
+        0.311
+      ],
+      "grasp": 0.0,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2983.7575,
+        "middle_touch_force": 2243.0854,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 63.7,
+      "plan_time_s": 18.42,
+      "phase": "final inspection",
+      "palm_target": [
+        -0.066,
+        0.131,
+        0.318
+      ],
+      "grasp": 0.0,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2833.3039,
+        "middle_touch_force": 2048.7636,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 1794.8363
+      }
+    },
+    {
+      "video_time_s": 63.93,
+      "plan_time_s": 18.49,
+      "phase": "final inspection",
+      "palm_target": [
+        -0.046,
+        0.122,
+        0.325
+      ],
+      "grasp": 0.0,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2819.0193,
+        "middle_touch_force": 0.0,
+        "ring_touch_force": 1589.3051,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 64.17,
+      "plan_time_s": 18.56,
+      "phase": "final inspection",
+      "palm_target": [
+        -0.029,
+        0.114,
+        0.33
+      ],
+      "grasp": 0.0,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2871.73,
+        "middle_touch_force": 2279.7828,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 64.4,
+      "plan_time_s": 18.63,
+      "phase": "final inspection",
+      "palm_target": [
+        -0.016,
+        0.107,
+        0.335
+      ],
+      "grasp": 0.0,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2894.1414,
+        "middle_touch_force": 2146.1108,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 64.63,
+      "plan_time_s": 18.69,
+      "phase": "final inspection",
+      "palm_target": [
+        -0.006,
+        0.103,
+        0.338
+      ],
+      "grasp": 0.0,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2983.7673,
+        "middle_touch_force": 1563.7866,
+        "ring_touch_force": 5977.1035,
+        "little_touch_force": 5521.4281
+      }
+    },
+    {
+      "video_time_s": 64.87,
+      "plan_time_s": 18.76,
+      "phase": "final inspection",
+      "palm_target": [
+        -0.001,
+        0.1,
+        0.34
+      ],
+      "grasp": 0.0,
+      "sensor_norms": {
+        "thumb_touch_force": 7885.6512,
+        "index_touch_force": 2873.21,
+        "middle_touch_force": 2277.0868,
+        "ring_touch_force": 1494.9823,
+        "little_touch_force": 5521.4281
+      }
+    }
+  ],
+  "renderer_fallback": "MuJoCo offscreen renderer was unavailable, so a top-down task video was generated from the same simulation state.",
+  "renderer_error": "Image width 1280 > framebuffer width 640. Either reduce the image\nwidth or specify a larger offscreen framebuffer in the model XML using the\nclause:\n<visual>\n  <global offwidth=\"my_width\"/>\n</visual>"
+}

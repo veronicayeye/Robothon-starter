@@ -1,0 +1,146 @@
+<mujoco model="dexrescue_tactile_forge">
+  <compiler angle="radian" inertiafromgeom="true"/>
+  <option timestep="0.004" gravity="0 0 -9.81" integrator="RK4" cone="elliptic"/>
+
+  <default>
+    <geom friction="1.3 0.02 0.002" solimp="0.92 0.98 0.002" solref="0.012 1"/>
+    <joint damping="0.8" armature="0.015" limited="true"/>
+    <position kp="260" kv="32" ctrlrange="-1 1"/>
+  </default>
+
+  <asset>
+    <texture name="grid" type="2d" builtin="checker" width="256" height="256"
+             rgb1="0.08 0.09 0.10" rgb2="0.16 0.15 0.14"/>
+    <material name="floor_mat" texture="grid" texrepeat="8 8" reflectance="0.15"/>
+    <material name="steel" rgba="0.42 0.46 0.50 1"/>
+    <material name="rubber" rgba="0.04 0.04 0.04 1"/>
+    <material name="skin" rgba="0.82 0.62 0.50 1"/>
+    <material name="safe" rgba="0.12 0.55 0.38 1"/>
+    <material name="urgent" rgba="0.78 0.16 0.12 1"/>
+    <material name="fragile" rgba="0.96 0.70 0.18 1"/>
+    <material name="zone_green" rgba="0.07 0.45 0.24 0.38"/>
+    <material name="zone_red" rgba="0.62 0.08 0.08 0.38"/>
+    <material name="zone_yellow" rgba="0.70 0.46 0.04 0.38"/>
+  </asset>
+
+  <worldbody>
+    <light pos="0 -1.2 1.8" dir="0 0.6 -1" diffuse="0.9 0.85 0.78"/>
+    <camera name="overview" pos="0.75 -1.65 1.05" xyaxes="0.92 0.39 0 -0.22 0.51 0.83"/>
+    <camera name="wrist_cam" pos="0.05 -0.70 0.45" xyaxes="1 0 0 0 0.58 0.82"/>
+
+    <geom name="floor" type="plane" size="1.2 1.0 0.04" material="floor_mat"/>
+    <geom name="workbench" type="box" pos="0 0 0.015" size="0.85 0.55 0.015" rgba="0.18 0.17 0.16 1"/>
+
+    <geom name="triage_green_zone" type="box" pos="-0.42 0.30 0.026" size="0.18 0.10 0.004" material="zone_green" contype="0" conaffinity="0"/>
+    <geom name="triage_red_zone" type="box" pos="0 0.32 0.026" size="0.18 0.10 0.004" material="zone_red" contype="0" conaffinity="0"/>
+    <geom name="triage_yellow_zone" type="box" pos="0.42 0.30 0.026" size="0.18 0.10 0.004" material="zone_yellow" contype="0" conaffinity="0"/>
+
+    <body name="med_vial" pos="-0.28 -0.18 0.075">
+      <freejoint/>
+      <geom name="med_vial_geom" type="capsule" size="0.027 0.055" material="fragile" mass="0.055"/>
+      <site name="med_vial_site" pos="0 0 0" size="0.012" rgba="1 0.75 0.2 1"/>
+    </body>
+    <body name="thermal_tag" pos="0.02 -0.22 0.055">
+      <freejoint/>
+      <geom name="thermal_tag_geom" type="box" size="0.045 0.035 0.018" material="urgent" mass="0.08"/>
+      <site name="thermal_tag_site" pos="0 0 0" size="0.012" rgba="1 0.1 0.1 1"/>
+    </body>
+    <body name="salvage_key" pos="0.30 -0.17 0.050">
+      <freejoint/>
+      <geom name="salvage_key_geom" type="cylinder" size="0.028 0.022" material="safe" mass="0.075"/>
+      <site name="salvage_key_site" pos="0 0 0" size="0.012" rgba="0.1 1 0.45 1"/>
+    </body>
+
+    <body name="gantry" pos="0 -0.40 0.22">
+      <joint name="slide_x" type="slide" axis="1 0 0" range="-0.55 0.55" damping="18"/>
+      <joint name="slide_y" type="slide" axis="0 1 0" range="-0.10 0.65" damping="18"/>
+      <joint name="lift_z" type="slide" axis="0 0 1" range="-0.12 0.22" damping="20"/>
+      <geom type="box" size="0.08 0.05 0.025" material="steel" mass="0.6"/>
+      <body name="palm" pos="0 0 0">
+        <joint name="wrist_roll" type="hinge" axis="0 1 0" range="-0.8 0.8"/>
+        <geom name="palm_pad" type="box" pos="0 0 0" size="0.08 0.045 0.018" material="skin" mass="0.18"/>
+        <site name="palm_center" pos="0 0 -0.030" size="0.008" rgba="0.2 0.8 1 1"/>
+
+        <body name="thumb_base" pos="-0.065 -0.035 -0.005" euler="0 0 -0.55">
+          <joint name="thumb_abd" type="hinge" axis="0 0 1" range="-0.65 0.55"/>
+          <geom type="capsule" fromto="0 0 0 0.055 0 -0.028" size="0.012" material="skin" mass="0.035"/>
+          <body name="thumb_tip" pos="0.055 0 -0.028">
+            <joint name="thumb_flex" type="hinge" axis="0 1 0" range="-0.15 1.25"/>
+            <geom name="thumb_touch_geom" type="capsule" fromto="0 0 0 0.052 0 -0.018" size="0.013" material="rubber" mass="0.025"/>
+            <site name="thumb_touch" pos="0.052 0 -0.018" size="0.014" rgba="0.05 0.05 0.05 1"/>
+          </body>
+        </body>
+
+        <body name="index_base" pos="-0.032 0 -0.018">
+          <joint name="index_mcp" type="hinge" axis="1 0 0" range="-0.15 1.25"/>
+          <geom type="capsule" fromto="0 0 0 0 -0.005 -0.055" size="0.010" material="skin" mass="0.026"/>
+          <body name="index_tip" pos="0 -0.005 -0.055">
+            <joint name="index_pip" type="hinge" axis="1 0 0" range="-0.10 1.35"/>
+            <geom name="index_touch_geom" type="capsule" fromto="0 0 0 0 -0.004 -0.050" size="0.011" material="rubber" mass="0.018"/>
+            <site name="index_touch" pos="0 -0.004 -0.050" size="0.012" rgba="0.05 0.05 0.05 1"/>
+          </body>
+        </body>
+
+        <body name="middle_base" pos="0 0 -0.020">
+          <joint name="middle_mcp" type="hinge" axis="1 0 0" range="-0.15 1.30"/>
+          <geom type="capsule" fromto="0 0 0 0 -0.004 -0.062" size="0.011" material="skin" mass="0.030"/>
+          <body name="middle_tip" pos="0 -0.004 -0.062">
+            <joint name="middle_pip" type="hinge" axis="1 0 0" range="-0.10 1.40"/>
+            <geom name="middle_touch_geom" type="capsule" fromto="0 0 0 0 -0.004 -0.055" size="0.012" material="rubber" mass="0.020"/>
+            <site name="middle_touch" pos="0 -0.004 -0.055" size="0.012" rgba="0.05 0.05 0.05 1"/>
+          </body>
+        </body>
+
+        <body name="ring_base" pos="0.032 0 -0.018">
+          <joint name="ring_mcp" type="hinge" axis="1 0 0" range="-0.15 1.20"/>
+          <geom type="capsule" fromto="0 0 0 0 -0.005 -0.054" size="0.010" material="skin" mass="0.024"/>
+          <body name="ring_tip" pos="0 -0.005 -0.054">
+            <joint name="ring_pip" type="hinge" axis="1 0 0" range="-0.10 1.30"/>
+            <geom name="ring_touch_geom" type="capsule" fromto="0 0 0 0 -0.004 -0.048" size="0.011" material="rubber" mass="0.018"/>
+            <site name="ring_touch" pos="0 -0.004 -0.048" size="0.012" rgba="0.05 0.05 0.05 1"/>
+          </body>
+        </body>
+
+        <body name="little_base" pos="0.060 0.002 -0.016" euler="0 0 0.08">
+          <joint name="little_mcp" type="hinge" axis="1 0 0" range="-0.15 1.15"/>
+          <geom type="capsule" fromto="0 0 0 0 -0.004 -0.047" size="0.009" material="skin" mass="0.018"/>
+          <body name="little_tip" pos="0 -0.004 -0.047">
+            <joint name="little_pip" type="hinge" axis="1 0 0" range="-0.10 1.25"/>
+            <geom name="little_touch_geom" type="capsule" fromto="0 0 0 0 -0.003 -0.041" size="0.010" material="rubber" mass="0.014"/>
+            <site name="little_touch" pos="0 -0.003 -0.041" size="0.011" rgba="0.05 0.05 0.05 1"/>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+
+  <actuator>
+    <position name="gantry_x" joint="slide_x" ctrlrange="-0.55 0.55" kp="520" kv="85"/>
+    <position name="gantry_y" joint="slide_y" ctrlrange="-0.10 0.65" kp="520" kv="85"/>
+    <position name="gantry_z" joint="lift_z" ctrlrange="-0.12 0.22" kp="620" kv="95"/>
+    <position name="wrist_roll_ctrl" joint="wrist_roll" ctrlrange="-0.8 0.8" kp="90" kv="16"/>
+    <position name="thumb_abd_ctrl" joint="thumb_abd" ctrlrange="-0.65 0.55" kp="80" kv="12"/>
+    <position name="thumb_flex_ctrl" joint="thumb_flex" ctrlrange="-0.15 1.25" kp="80" kv="12"/>
+    <position name="index_mcp_ctrl" joint="index_mcp" ctrlrange="-0.15 1.25" kp="85" kv="12"/>
+    <position name="index_pip_ctrl" joint="index_pip" ctrlrange="-0.10 1.35" kp="75" kv="10"/>
+    <position name="middle_mcp_ctrl" joint="middle_mcp" ctrlrange="-0.15 1.30" kp="85" kv="12"/>
+    <position name="middle_pip_ctrl" joint="middle_pip" ctrlrange="-0.10 1.40" kp="75" kv="10"/>
+    <position name="ring_mcp_ctrl" joint="ring_mcp" ctrlrange="-0.15 1.20" kp="75" kv="10"/>
+    <position name="ring_pip_ctrl" joint="ring_pip" ctrlrange="-0.10 1.30" kp="65" kv="9"/>
+    <position name="little_mcp_ctrl" joint="little_mcp" ctrlrange="-0.15 1.15" kp="65" kv="9"/>
+    <position name="little_pip_ctrl" joint="little_pip" ctrlrange="-0.10 1.25" kp="60" kv="8"/>
+  </actuator>
+
+  <sensor>
+    <framepos name="palm_position" objtype="site" objname="palm_center"/>
+    <touch name="thumb_touch_force" site="thumb_touch"/>
+    <touch name="index_touch_force" site="index_touch"/>
+    <touch name="middle_touch_force" site="middle_touch"/>
+    <touch name="ring_touch_force" site="ring_touch"/>
+    <touch name="little_touch_force" site="little_touch"/>
+    <jointpos name="thumb_flexion" joint="thumb_flex"/>
+    <jointpos name="index_flexion" joint="index_mcp"/>
+    <jointpos name="middle_flexion" joint="middle_mcp"/>
+    <jointvel name="wrist_roll_rate" joint="wrist_roll"/>
+  </sensor>
+</mujoco>
