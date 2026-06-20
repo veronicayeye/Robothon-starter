@@ -7479,7 +7479,5 @@
         "little_touch_force": 0.0
       }
     }
-  ],
-  "renderer_fallback": "MuJoCo offscreen renderer was unavailable, so a top-down task video was generated from the same simulation state.",
-  "renderer_error": "Image width 1280 > framebuffer width 640. Either reduce the image\nwidth or specify a larger offscreen framebuffer in the model XML using the\nclause:\n<visual>\n  <global offwidth=\"my_width\"/>\n</visual>"
+  ]
 }

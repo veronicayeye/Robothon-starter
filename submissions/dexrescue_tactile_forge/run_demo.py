@@ -915,6 +915,8 @@ def run_demo(
                 )
     finally:
         writer.close()
+        if renderer is not None:
+            renderer.close()
 
     sorted_pairs = sorted(contact_pairs.items(), key=lambda item: item[1], reverse=True)
     summary = {

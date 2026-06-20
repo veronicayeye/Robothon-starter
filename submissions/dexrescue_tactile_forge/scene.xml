@@ -1,6 +1,9 @@
 <mujoco model="dexrescue_tactile_forge">
   <compiler angle="radian" inertiafromgeom="true"/>
   <option timestep="0.004" gravity="0 0 -9.81" integrator="implicitfast" cone="elliptic" viscosity="0.002"/>
+  <visual>
+    <global offwidth="1280" offheight="720"/>
+  </visual>
 
   <default>
     <geom friction="1.3 0.02 0.002" solimp="0.92 0.98 0.002" solref="0.012 1"/>
