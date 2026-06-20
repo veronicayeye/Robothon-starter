@@ -1267,92 +1267,92 @@
   },
   "object_motion": {
     "thermal_tag": {
-      "path_length_m": 0.7717,
-      "max_height_m": 0.1919,
-      "first_success_time_s": 5.47
+      "path_length_m": 1.3742,
+      "max_height_m": 0.2255,
+      "first_success_time_s": 6.7
     },
     "med_vial": {
-      "path_length_m": 1.2121,
-      "max_height_m": 0.2135,
-      "first_success_time_s": 11.53
+      "path_length_m": 1.9474,
+      "max_height_m": 0.2524,
+      "first_success_time_s": 12.67
     },
     "salvage_key": {
-      "path_length_m": 1.7305,
-      "max_height_m": 0.1875,
-      "first_success_time_s": 17.53
+      "path_length_m": 2.1001,
+      "max_height_m": 0.2231,
+      "first_success_time_s": 18.67
     },
     "airway_clip": {
-      "path_length_m": 1.1104,
-      "max_height_m": 0.1928,
-      "first_success_time_s": 23.47
+      "path_length_m": 1.5978,
+      "max_height_m": 0.225,
+      "first_success_time_s": 24.67
     },
     "iv_connector": {
-      "path_length_m": 1.2623,
-      "max_height_m": 0.085,
+      "path_length_m": 1.9422,
+      "max_height_m": 0.2361,
       "first_success_time_s": 30.67
     },
     "radio_beacon": {
-      "path_length_m": 0.9478,
-      "max_height_m": 0.1951,
-      "first_success_time_s": 35.47
+      "path_length_m": 1.5015,
+      "max_height_m": 0.2356,
+      "first_success_time_s": 36.67
     },
     "data_chip": {
-      "path_length_m": 0.5803,
-      "max_height_m": 0.1887,
-      "first_success_time_s": 41.3
+      "path_length_m": 1.4692,
+      "max_height_m": 0.2189,
+      "first_success_time_s": 42.63
     },
     "pressure_syringe": {
-      "path_length_m": 0.8455,
-      "max_height_m": 0.085,
+      "path_length_m": 1.9267,
+      "max_height_m": 0.2033,
       "first_success_time_s": 48.63
     },
     "hazmat_cap": {
-      "path_length_m": 1.453,
-      "max_height_m": 0.1908,
-      "first_success_time_s": 53.4
+      "path_length_m": 3.367,
+      "max_height_m": 0.2227,
+      "first_success_time_s": 54.63
     },
     "seal_puck": {
-      "path_length_m": 0.7418,
-      "max_height_m": 0.1904,
-      "first_success_time_s": 59.4
+      "path_length_m": 1.5917,
+      "max_height_m": 0.2232,
+      "first_success_time_s": 60.63
     }
   },
   "contact_metrics": {
-    "max_simultaneous_contacts": 46,
+    "max_simultaneous_contacts": 52,
     "contact_step_ratio": 1.0,
-    "unique_contact_pairs": 31,
+    "unique_contact_pairs": 108,
     "top_contact_pairs": [
       [
         "seal_puck_geom <-> workbench",
-        42660
+        42500
       ],
       [
         "hazmat_cap_geom <-> workbench",
-        37829
+        26729
       ],
       [
         "data_chip_geom <-> workbench",
-        23236
+        23318
       ],
       [
         "radio_beacon_geom <-> workbench",
-        19648
+        19580
       ],
       [
         "pressure_syringe_geom <-> workbench",
-        13814
+        13103
       ],
       [
         "airway_clip_geom <-> workbench",
-        12489
+        12307
       ],
       [
         "iv_connector_geom <-> workbench",
-        11760
+        11252
       ],
       [
         "salvage_key_geom <-> workbench",
-        11329
+        10872
       ],
       [
         "geom_15 <-> geom_17",
@@ -1459,15 +1459,15 @@
     }
   },
   "sensor_peaks": {
-    "palm_position": 0.7351,
-    "thumb_touch_force": 0.0,
-    "index_touch_force": 0.0,
-    "middle_touch_force": 66.2268,
-    "ring_touch_force": 49.288,
-    "little_touch_force": 12.2381,
+    "palm_position": 0.7337,
+    "thumb_touch_force": 42.2174,
+    "index_touch_force": 9.5171,
+    "middle_touch_force": 66.2491,
+    "ring_touch_force": 48.5521,
+    "little_touch_force": 12.9523,
     "thumb_flexion": 1.018,
-    "index_flexion": 0.9288,
-    "middle_flexion": 0.988,
+    "index_flexion": 0.9252,
+    "middle_flexion": 0.9908,
     "wrist_roll_rate": 2.0904
   },
   "per_object_touch_peaks": {
@@ -1476,7 +1476,7 @@
       "index_touch_force": 0.0,
       "middle_touch_force": 16.8905,
       "ring_touch_force": 0.0,
-      "little_touch_force": 10.4716
+      "little_touch_force": 12.9523
     },
     "med_vial": {
       "thumb_touch_force": 0.0,
@@ -1488,14 +1488,14 @@
     "salvage_key": {
       "thumb_touch_force": 0.0,
       "index_touch_force": 0.0,
-      "middle_touch_force": 14.7463,
+      "middle_touch_force": 14.7254,
       "ring_touch_force": 0.0,
       "little_touch_force": 0.0
     },
     "airway_clip": {
       "thumb_touch_force": 0.0,
       "index_touch_force": 0.0,
-      "middle_touch_force": 9.5715,
+      "middle_touch_force": 13.1475,
       "ring_touch_force": 0.0,
       "little_touch_force": 0.0
     },
@@ -1509,14 +1509,14 @@
     "radio_beacon": {
       "thumb_touch_force": 0.0,
       "index_touch_force": 0.0,
-      "middle_touch_force": 0.0,
-      "ring_touch_force": 24.9849,
+      "middle_touch_force": 36.5257,
+      "ring_touch_force": 0.0,
       "little_touch_force": 0.0
     },
     "data_chip": {
       "thumb_touch_force": 0.0,
       "index_touch_force": 0.0,
-      "middle_touch_force": 19.5229,
+      "middle_touch_force": 16.3543,
       "ring_touch_force": 0.0,
       "little_touch_force": 0.0
     },
@@ -1530,14 +1530,14 @@
     "hazmat_cap": {
       "thumb_touch_force": 0.0,
       "index_touch_force": 0.0,
-      "middle_touch_force": 0.0,
+      "middle_touch_force": 14.0624,
       "ring_touch_force": 0.0,
       "little_touch_force": 0.0
     },
     "seal_puck": {
       "thumb_touch_force": 0.0,
       "index_touch_force": 0.0,
-      "middle_touch_force": 13.1724,
+      "middle_touch_force": 13.1751,
       "ring_touch_force": 0.0,
       "little_touch_force": 0.0
     }
@@ -1605,7 +1605,7 @@
         },
         "success_rate": 1.0,
         "objects_sorted": 10,
-        "max_contacts": 46,
+        "max_contacts": 50,
         "contact_step_ratio": 1.0,
         "object_results": {
           "thermal_tag": {
@@ -1786,7 +1786,7 @@
         },
         "success_rate": 1.0,
         "objects_sorted": 10,
-        "max_contacts": 46,
+        "max_contacts": 52,
         "contact_step_ratio": 1.0,
         "object_results": {
           "thermal_tag": {
@@ -1967,7 +1967,7 @@
         },
         "success_rate": 1.0,
         "objects_sorted": 10,
-        "max_contacts": 44,
+        "max_contacts": 50,
         "contact_step_ratio": 1.0,
         "object_results": {
           "thermal_tag": {
@@ -2148,7 +2148,7 @@
         },
         "success_rate": 1.0,
         "objects_sorted": 10,
-        "max_contacts": 44,
+        "max_contacts": 50,
         "contact_step_ratio": 1.0,
         "object_results": {
           "thermal_tag": {
@@ -2329,7 +2329,7 @@
         },
         "success_rate": 1.0,
         "objects_sorted": 10,
-        "max_contacts": 44,
+        "max_contacts": 50,
         "contact_step_ratio": 1.0,
         "object_results": {
           "thermal_tag": {
@@ -2992,7 +2992,7 @@
       "sensor_norms": {
         "thumb_touch_force": 0.0,
         "index_touch_force": 0.0,
-        "middle_touch_force": 15.8985,
+        "middle_touch_force": 16.9089,
         "ring_touch_force": 0.0,
         "little_touch_force": 0.0
       }
@@ -3479,7 +3479,7 @@
         "thumb_touch_force": 0.0,
         "index_touch_force": 0.0,
         "middle_touch_force": 0.0,
-        "ring_touch_force": 3.0439,
+        "ring_touch_force": 0.0736,
         "little_touch_force": 0.0
       }
     },
@@ -3496,8 +3496,8 @@
       "sensor_norms": {
         "thumb_touch_force": 0.0,
         "index_touch_force": 0.0,
-        "middle_touch_force": 1.2779,
-        "ring_touch_force": 1.419,
+        "middle_touch_force": 3.7952,
+        "ring_touch_force": 4.5139,
         "little_touch_force": 0.0
       }
     },
@@ -3514,7 +3514,7 @@
       "sensor_norms": {
         "thumb_touch_force": 0.0,
         "index_touch_force": 0.0,
-        "middle_touch_force": 0.0194,
+        "middle_touch_force": 26.1427,
         "ring_touch_force": 0.0,
         "little_touch_force": 0.0
       }
@@ -3604,7 +3604,7 @@
       "sensor_norms": {
         "thumb_touch_force": 0.0,
         "index_touch_force": 0.0,
-        "middle_touch_force": 8.6114,
+        "middle_touch_force": 8.6385,
         "ring_touch_force": 0.0,
         "little_touch_force": 0.0
       }
@@ -3910,7 +3910,7 @@
       "sensor_norms": {
         "thumb_touch_force": 0.0,
         "index_touch_force": 0.0,
-        "middle_touch_force": 10.9544,
+        "middle_touch_force": 16.4733,
         "ring_touch_force": 0.0,
         "little_touch_force": 0.0
       }
@@ -3982,7 +3982,7 @@
       "sensor_norms": {
         "thumb_touch_force": 0.0,
         "index_touch_force": 0.0,
-        "middle_touch_force": 26.9982,
+        "middle_touch_force": 27.0343,
         "ring_touch_force": 0.0,
         "little_touch_force": 0.0
       }
@@ -4362,7 +4362,7 @@
         "index_touch_force": 0.0,
         "middle_touch_force": 0.0,
         "ring_touch_force": 0.0,
-        "little_touch_force": 7.519
+        "little_touch_force": 0.0
       }
     },
     {
@@ -4378,7 +4378,7 @@
       "sensor_norms": {
         "thumb_touch_force": 0.0,
         "index_touch_force": 0.0,
-        "middle_touch_force": 16.3029,
+        "middle_touch_force": 16.0097,
         "ring_touch_force": 0.0,
         "little_touch_force": 0.0
       }
@@ -4830,7 +4830,7 @@
         "index_touch_force": 0.0,
         "middle_touch_force": 0.0,
         "ring_touch_force": 0.0,
-        "little_touch_force": 0.0
+        "little_touch_force": 7.6641
       }
     },
     {
@@ -5261,7 +5261,7 @@
         "thumb_touch_force": 0.0,
         "index_touch_force": 0.0,
         "middle_touch_force": 0.0,
-        "ring_touch_force": 17.0431,
+        "ring_touch_force": 0.0,
         "little_touch_force": 0.0
       }
     },
@@ -5278,8 +5278,8 @@
       "sensor_norms": {
         "thumb_touch_force": 0.0,
         "index_touch_force": 0.0,
-        "middle_touch_force": 0.0,
-        "ring_touch_force": 25.3418,
+        "middle_touch_force": 18.4174,
+        "ring_touch_force": 0.0,
         "little_touch_force": 0.0
       }
     },
@@ -5296,8 +5296,8 @@
       "sensor_norms": {
         "thumb_touch_force": 0.0,
         "index_touch_force": 0.0,
-        "middle_touch_force": 0.0,
-        "ring_touch_force": 29.2043,
+        "middle_touch_force": 22.5302,
+        "ring_touch_force": 0.0,
         "little_touch_force": 0.0
       }
     },
@@ -5315,7 +5315,7 @@
         "thumb_touch_force": 0.0,
         "index_touch_force": 0.0,
         "middle_touch_force": 0.0,
-        "ring_touch_force": 14.9276,
+        "ring_touch_force": 0.0,
         "little_touch_force": 0.0
       }
     },
@@ -5440,7 +5440,7 @@
       "sensor_norms": {
         "thumb_touch_force": 0.0,
         "index_touch_force": 0.0,
-        "middle_touch_force": 19.5229,
+        "middle_touch_force": 16.3543,
         "ring_touch_force": 0.0,
         "little_touch_force": 0.0
       }
@@ -5458,7 +5458,7 @@
       "sensor_norms": {
         "thumb_touch_force": 0.0,
         "index_touch_force": 0.0,
-        "middle_touch_force": 9.5719,
+        "middle_touch_force": 10.456,
         "ring_touch_force": 0.0,
         "little_touch_force": 0.0
       }
@@ -5746,8 +5746,8 @@
       "sensor_norms": {
         "thumb_touch_force": 0.0,
         "index_touch_force": 0.0,
-        "middle_touch_force": 16.5906,
-        "ring_touch_force": 0.9366,
+        "middle_touch_force": 17.2178,
+        "ring_touch_force": 0.0,
         "little_touch_force": 0.0
       }
     },
@@ -5764,7 +5764,7 @@
       "sensor_norms": {
         "thumb_touch_force": 0.0,
         "index_touch_force": 0.0,
-        "middle_touch_force": 15.4949,
+        "middle_touch_force": 15.668,
         "ring_touch_force": 0.0,
         "little_touch_force": 0.0
       }
@@ -5782,7 +5782,7 @@
       "sensor_norms": {
         "thumb_touch_force": 0.0,
         "index_touch_force": 0.0,
-        "middle_touch_force": 12.3823,
+        "middle_touch_force": 0.0,
         "ring_touch_force": 0.0,
         "little_touch_force": 0.0
       }
@@ -6194,7 +6194,7 @@
       ],
       "grasp": 0.519,
       "sensor_norms": {
-        "thumb_touch_force": 0.0,
+        "thumb_touch_force": 42.2174,
         "index_touch_force": 0.0,
         "middle_touch_force": 0.0,
         "ring_touch_force": 0.0,
@@ -6340,7 +6340,7 @@
       "sensor_norms": {
         "thumb_touch_force": 0.0,
         "index_touch_force": 0.0,
-        "middle_touch_force": 17.0509,
+        "middle_touch_force": 0.0,
         "ring_touch_force": 0.0,
         "little_touch_force": 0.0
       }
@@ -6358,7 +6358,7 @@
       "sensor_norms": {
         "thumb_touch_force": 0.0,
         "index_touch_force": 0.0,
-        "middle_touch_force": 21.2673,
+        "middle_touch_force": 0.0,
         "ring_touch_force": 0.0,
         "little_touch_force": 0.0
       }
@@ -6376,7 +6376,7 @@
       "sensor_norms": {
         "thumb_touch_force": 0.0,
         "index_touch_force": 0.0,
-        "middle_touch_force": 0.0,
+        "middle_touch_force": 7.548,
         "ring_touch_force": 0.0,
         "little_touch_force": 0.0
       }
@@ -6682,7 +6682,7 @@
       "sensor_norms": {
         "thumb_touch_force": 0.0,
         "index_touch_force": 0.0,
-        "middle_touch_force": 14.1984,
+        "middle_touch_force": 16.9612,
         "ring_touch_force": 0.0,
         "little_touch_force": 0.0
       }
@@ -7132,7 +7132,7 @@
       "sensor_norms": {
         "thumb_touch_force": 0.0,
         "index_touch_force": 0.0,
-        "middle_touch_force": 12.1133,
+        "middle_touch_force": 0.0,
         "ring_touch_force": 0.0,
         "little_touch_force": 0.0
       }
@@ -7150,7 +7150,7 @@
       "sensor_norms": {
         "thumb_touch_force": 0.0,
         "index_touch_force": 0.0,
-        "middle_touch_force": 21.9115,
+        "middle_touch_force": 16.6424,
         "ring_touch_force": 0.0,
         "little_touch_force": 0.0
       }
@@ -7168,7 +7168,7 @@
       "sensor_norms": {
         "thumb_touch_force": 0.0,
         "index_touch_force": 0.0,
-        "middle_touch_force": 0.0,
+        "middle_touch_force": 12.9911,
         "ring_touch_force": 0.0,
         "little_touch_force": 0.0
       }

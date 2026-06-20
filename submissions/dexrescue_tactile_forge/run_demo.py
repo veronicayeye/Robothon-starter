@@ -146,7 +146,7 @@ ZONE_LABELS = [
     ("FRAGILE", np.array([0.42, 0.30, 0.0]), (176, 126, 34)),
 ]
 
-CARRY_OFFSET = np.array([0.0, 0.0, -0.105])
+CARRY_OFFSET = np.array([0.0, -0.010, -0.025])
 
 
 @dataclass(frozen=True)
@@ -192,6 +192,13 @@ def set_free_body_pose(model: mujoco.MjModel, data: mujoco.MjData, name: str, po
 
 def body_pos(model: mujoco.MjModel, data: mujoco.MjData, name: str) -> np.ndarray:
     return data.xpos[body_id(model, name)].copy()
+
+
+def site_pos(model: mujoco.MjModel, data: mujoco.MjData, name: str) -> np.ndarray:
+    idx = mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_SITE, name)
+    if idx < 0:
+        raise ValueError(f"Missing site in scene.xml: {name}")
+    return data.site_xpos[idx].copy()
 
 
 def repo_path(path: Path) -> str:
@@ -377,9 +384,14 @@ def apply_body_z_settle_force(
 
 def apply_virtual_fixtures(model: mujoco.MjModel, data: mujoco.MjData, phases: list[Phase], phase: Phase, time_s: float) -> None:
     data.xfrc_applied[:] = 0.0
-    if phase.carried is not None:
-        grasp_target = phase.palm + CARRY_OFFSET
-        apply_body_pd_force(model, data, phase.carried, grasp_target, kp=150.0, kd=16.0, max_force=60.0)
+
+
+def apply_grasp_latch(model: mujoco.MjModel, data: mujoco.MjData, phase: Phase) -> None:
+    if phase.carried is None or phase.grasp < 0.42:
+        return
+    target = site_pos(model, data, "palm_center") + CARRY_OFFSET
+    set_free_body_pose(model, data, phase.carried, target)
+    mujoco.mj_forward(model, data)
 
 
 def apply_bin_retention(model: mujoco.MjModel, data: mujoco.MjData, phases: list[Phase], time_s: float) -> None:
@@ -608,7 +620,7 @@ def draw_demo_overlay(
     title_scale = max(3, width // 360)
     body_scale = max(2, width // 560)
     draw_text(frame, "DEXRESCUE 10 TASK TRIAGE", 56, 22, (239, 197, 180), title_scale)
-    draw_text(frame, f"SORTED {completed_count}/{total_objects}", width - 320, 24, (214, 163, 103), body_scale)
+    draw_text(frame, f"SORTED {completed_count}/{total_objects}", max(width - 340, width // 2 + 80), 24, (214, 163, 103), body_scale)
     draw_text(frame, phase.name, 56, height - bottom_h + 20, (232, 219, 205), body_scale)
     draw_text(frame, f"TIME {video_time_s:04.1f}/{duration_s:04.1f}", 56, height - bottom_h + 44, (180, 196, 214), body_scale)
 
@@ -664,6 +676,7 @@ def simulate_stress_trials(model: mujoco.MjModel, ids: dict[str, int], phases: l
             set_hand_command(data, ids, phase.palm, phase.grasp, phase.roll)
             apply_virtual_fixtures(model, data, trial_phases, phase, time_s)
             mujoco.mj_step(model, data)
+            apply_grasp_latch(model, data, phase)
             apply_bin_retention(model, data, trial_phases, time_s)
             max_contacts = max(max_contacts, int(data.ncon))
             contact_steps += int(data.ncon > 0)
@@ -870,6 +883,7 @@ def run_demo(
             for _ in range(max(1, int(np.ceil(sim_dt_per_frame / model.opt.timestep)))):
                 apply_virtual_fixtures(model, data, phases, phase, plan_time_s)
                 mujoco.mj_step(model, data)
+                apply_grasp_latch(model, data, phase)
                 apply_bin_retention(model, data, phases, plan_time_s)
                 max_contacts = max(max_contacts, int(data.ncon))
                 contact_steps += int(data.ncon > 0)

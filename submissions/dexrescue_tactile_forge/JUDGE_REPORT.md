@@ -61,20 +61,20 @@ Sensors: `palm_position`, `thumb_touch_force`, `index_touch_force`, `middle_touc
 
 ## Control And Contact Evidence
 
-- Max simultaneous MuJoCo contacts observed: `46`
+- Max simultaneous MuJoCo contacts observed: `52`
 - Simulation steps with at least one contact: `1.0000`
-- Unique contact pairs observed: `31`
+- Unique contact pairs observed: `108`
 
 Top contact pairs:
 
-- `seal_puck_geom <-> workbench`: 42660
-- `hazmat_cap_geom <-> workbench`: 37829
-- `data_chip_geom <-> workbench`: 23236
-- `radio_beacon_geom <-> workbench`: 19648
-- `pressure_syringe_geom <-> workbench`: 13814
-- `airway_clip_geom <-> workbench`: 12489
-- `iv_connector_geom <-> workbench`: 11760
-- `salvage_key_geom <-> workbench`: 11329
+- `seal_puck_geom <-> workbench`: 42500
+- `hazmat_cap_geom <-> workbench`: 26729
+- `data_chip_geom <-> workbench`: 23318
+- `radio_beacon_geom <-> workbench`: 19580
+- `pressure_syringe_geom <-> workbench`: 13103
+- `airway_clip_geom <-> workbench`: 12307
+- `iv_connector_geom <-> workbench`: 11252
+- `salvage_key_geom <-> workbench`: 10872
 - `geom_15 <-> geom_17`: 9750
 - `geom_15 <-> geom_19`: 9750
 - `geom_15 <-> geom_21`: 9750
