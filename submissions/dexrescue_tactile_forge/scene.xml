@@ -1,6 +1,6 @@
 <mujoco model="dexrescue_tactile_forge">
   <compiler angle="radian" inertiafromgeom="true"/>
-  <option timestep="0.004" gravity="0 0 -9.81" integrator="RK4" cone="elliptic"/>
+  <option timestep="0.004" gravity="0 0 -9.81" integrator="implicitfast" cone="elliptic" viscosity="0.002"/>
 
   <default>
     <geom friction="1.3 0.02 0.002" solimp="0.92 0.98 0.002" solref="0.012 1"/>
@@ -18,6 +18,10 @@
     <material name="safe" rgba="0.12 0.55 0.38 1"/>
     <material name="urgent" rgba="0.78 0.16 0.12 1"/>
     <material name="fragile" rgba="0.96 0.70 0.18 1"/>
+    <material name="blue" rgba="0.14 0.46 0.86 1"/>
+    <material name="violet" rgba="0.48 0.28 0.78 1"/>
+    <material name="white" rgba="0.86 0.86 0.82 1"/>
+    <material name="orange" rgba="0.92 0.42 0.16 1"/>
     <material name="zone_green" rgba="0.07 0.45 0.24 0.38"/>
     <material name="zone_red" rgba="0.62 0.08 0.08 0.38"/>
     <material name="zone_yellow" rgba="0.70 0.46 0.04 0.38"/>
@@ -28,8 +32,8 @@
     <camera name="overview" pos="0.75 -1.65 1.05" xyaxes="0.92 0.39 0 -0.22 0.51 0.83"/>
     <camera name="wrist_cam" pos="0.05 -0.70 0.45" xyaxes="1 0 0 0 0.58 0.82"/>
 
-    <geom name="floor" type="plane" size="1.2 1.0 0.04" material="floor_mat"/>
-    <geom name="workbench" type="box" pos="0 0 0.015" size="0.85 0.55 0.015" rgba="0.18 0.17 0.16 1"/>
+    <geom name="floor" type="plane" size="1.4 1.1 0.04" material="floor_mat"/>
+    <geom name="workbench" type="box" pos="0 0 0.015" size="0.92 0.60 0.015" rgba="0.18 0.17 0.16 1"/>
 
     <geom name="triage_green_zone" type="box" pos="-0.42 0.30 0.026" size="0.18 0.10 0.004" material="zone_green" contype="0" conaffinity="0"/>
     <geom name="triage_red_zone" type="box" pos="0 0.32 0.026" size="0.18 0.10 0.004" material="zone_red" contype="0" conaffinity="0"/>
@@ -37,22 +41,57 @@
 
     <body name="med_vial" pos="-0.28 -0.18 0.075">
       <freejoint/>
-      <geom name="med_vial_geom" type="capsule" size="0.027 0.055" material="fragile" mass="0.055"/>
+      <geom name="med_vial_geom" type="capsule" size="0.027 0.055" material="fragile" mass="0.055" contype="2" conaffinity="1"/>
       <site name="med_vial_site" pos="0 0 0" size="0.012" rgba="1 0.75 0.2 1"/>
     </body>
     <body name="thermal_tag" pos="0.02 -0.22 0.055">
       <freejoint/>
-      <geom name="thermal_tag_geom" type="box" size="0.045 0.035 0.018" material="urgent" mass="0.08"/>
+      <geom name="thermal_tag_geom" type="box" size="0.045 0.035 0.018" material="urgent" mass="0.08" contype="2" conaffinity="1"/>
       <site name="thermal_tag_site" pos="0 0 0" size="0.012" rgba="1 0.1 0.1 1"/>
     </body>
     <body name="salvage_key" pos="0.30 -0.17 0.050">
       <freejoint/>
-      <geom name="salvage_key_geom" type="cylinder" size="0.028 0.022" material="safe" mass="0.075"/>
+      <geom name="salvage_key_geom" type="cylinder" size="0.028 0.022" material="safe" mass="0.075" contype="2" conaffinity="1"/>
       <site name="salvage_key_site" pos="0 0 0" size="0.012" rgba="0.1 1 0.45 1"/>
+    </body>
+    <body name="airway_clip" pos="-0.48 -0.23 0.055">
+      <freejoint/>
+      <geom name="airway_clip_geom" type="box" size="0.040 0.024 0.020" material="urgent" mass="0.065" contype="2" conaffinity="1"/>
+      <site name="airway_clip_site" pos="0 0 0" size="0.011" rgba="1 0.1 0.1 1"/>
+    </body>
+    <body name="iv_connector" pos="-0.12 -0.31 0.060">
+      <freejoint/>
+      <geom name="iv_connector_geom" type="capsule" size="0.018 0.045" material="fragile" mass="0.045" contype="2" conaffinity="1"/>
+      <site name="iv_connector_site" pos="0 0 0" size="0.011" rgba="1 0.75 0.2 1"/>
+    </body>
+    <body name="radio_beacon" pos="0.48 -0.26 0.058">
+      <freejoint/>
+      <geom name="radio_beacon_geom" type="box" size="0.035 0.030 0.020" material="blue" mass="0.080" contype="2" conaffinity="1"/>
+      <site name="radio_beacon_site" pos="0 0 0" size="0.011" rgba="0.2 0.55 1 1"/>
+    </body>
+    <body name="data_chip" pos="-0.36 -0.06 0.050">
+      <freejoint/>
+      <geom name="data_chip_geom" type="box" size="0.040 0.026 0.014" material="safe" mass="0.050" contype="2" conaffinity="1"/>
+      <site name="data_chip_site" pos="0 0 0" size="0.010" rgba="0.1 1 0.45 1"/>
+    </body>
+    <body name="pressure_syringe" pos="0.00 -0.04 0.070">
+      <freejoint/>
+      <geom name="pressure_syringe_geom" type="capsule" size="0.024 0.060" material="white" mass="0.080" contype="2" conaffinity="1"/>
+      <site name="pressure_syringe_site" pos="0 0 0" size="0.011" rgba="0.9 0.9 0.85 1"/>
+    </body>
+    <body name="hazmat_cap" pos="0.36 -0.05 0.052">
+      <freejoint/>
+      <geom name="hazmat_cap_geom" type="cylinder" size="0.033 0.018" material="orange" mass="0.050" contype="2" conaffinity="1"/>
+      <site name="hazmat_cap_site" pos="0 0 0" size="0.011" rgba="1 0.5 0.15 1"/>
+    </body>
+    <body name="seal_puck" pos="0.16 0.10 0.052">
+      <freejoint/>
+      <geom name="seal_puck_geom" type="cylinder" size="0.030 0.020" material="violet" mass="0.055" contype="2" conaffinity="1"/>
+      <site name="seal_puck_site" pos="0 0 0" size="0.010" rgba="0.62 0.35 1 1"/>
     </body>
 
     <body name="gantry" pos="0 -0.40 0.22">
-      <joint name="slide_x" type="slide" axis="1 0 0" range="-0.55 0.55" damping="18"/>
+      <joint name="slide_x" type="slide" axis="1 0 0" range="-0.62 0.62" damping="18"/>
       <joint name="slide_y" type="slide" axis="0 1 0" range="-0.10 0.65" damping="18"/>
       <joint name="lift_z" type="slide" axis="0 0 1" range="-0.12 0.22" damping="20"/>
       <geom type="box" size="0.08 0.05 0.025" material="steel" mass="0.6"/>
@@ -115,7 +154,7 @@
   </worldbody>
 
   <actuator>
-    <position name="gantry_x" joint="slide_x" ctrlrange="-0.55 0.55" kp="520" kv="85"/>
+    <position name="gantry_x" joint="slide_x" ctrlrange="-0.62 0.62" kp="520" kv="85"/>
     <position name="gantry_y" joint="slide_y" ctrlrange="-0.10 0.65" kp="520" kv="85"/>
     <position name="gantry_z" joint="lift_z" ctrlrange="-0.12 0.22" kp="620" kv="95"/>
     <position name="wrist_roll_ctrl" joint="wrist_roll" ctrlrange="-0.8 0.8" kp="90" kv="16"/>

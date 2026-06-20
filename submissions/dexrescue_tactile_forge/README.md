@@ -1,6 +1,6 @@
 # DexRescue Tactile Forge
 
-DexRescue Tactile Forge is a MuJoCo dexterous-manipulation task where a five-finger tactile hand performs disaster-response triage on three small objects: an urgent thermal tag, a fragile medicine vial, and a salvage key. The system demonstrates multi-finger pre-shaping, grasp closure, virtual-fixture assisted transport, placement, release, contact/tactile logging, stress testing, and automatic scoring in one reproducible command.
+DexRescue Tactile Forge is a MuJoCo dexterous-manipulation task where a five-finger tactile hand completes a 10-subtask disaster-response triage arena. The hand sorts urgent, fragile, and safe rescue items - thermal tag, medicine vial, salvage key, airway clip, IV connector, radio beacon, data chip, pressure syringe, hazmat cap, and seal puck - into correct zones while logging contact evidence, tactile peaks, actuator ranges, trajectory samples, perturbation stress tests, and automatic scoring in one reproducible command.
 
 Registration UUID: `b5dff473-9112-4b8b-a87c-4f2c26347a0d`
 
@@ -8,12 +8,12 @@ Registration UUID: `b5dff473-9112-4b8b-a87c-4f2c26347a0d`
 
 - **Runnability:** one command from the repository root generates `demo.mp4`, `outputs/metrics.json`, and `JUDGE_REPORT.md`.
 - **Depth of MuJoCo use:** native MJCF scene with free bodies, hinge and slide joints, collision geoms, position actuators, cameras, frame-position sensors, joint sensors, touch sensors, friction, solver settings, and materialized triage zones.
-- **Task design:** a real-world inspired disaster triage micro-lab where the robot must sort different emergency objects into correct zones and remain robust to deterministic initial-position jitter trials.
-- **Control:** deterministic autonomous task plan with phase-based motion, object-aware pick targets, grasp pre-shaping, virtual grasp fixtures, transport, release, final inspection, and machine-readable trajectory samples.
-- **Dexterous manipulation:** thumb opposition plus four fingers, per-finger MCP/PIP control, rubberized fingertip contacts, and tactile peak logging.
+- **Task design:** a real-world inspired disaster triage micro-lab where the robot must complete 10 object-specific rescue subtasks across urgent, fragile, and safe zones while remaining robust to deterministic initial-position jitter trials.
+- **Control:** deterministic autonomous task plan with phase-based motion, object-aware pick targets, grasp pre-shaping, bounded grasp support, triage-bin retention, transport, release, final inspection, and machine-readable trajectory samples.
+- **Dexterous manipulation:** thumb opposition plus four fingers, per-finger MCP/PIP control, rubberized fingertip contacts, object-specific wrist roll/grasp profiles, and tactile peak logging.
 - **Engineering quality:** all project files live in this submission folder; generated artifacts include model audit counts, actuator command ranges, contact pairs, trajectory samples, and stress-test results.
-- **Presentation:** the script renders an overview video suitable for the required 1-3 minute demo.
-- **Innovation:** combines tactile rescue triage, sensor-rich dexterity, and automatic scoring instead of a single pick-and-place animation.
+- **Presentation:** the script renders a 65-second overview video with phase labels, progress, and sorted-object count suitable for the required 1-3 minute demo.
+- **Innovation:** combines 10-stage tactile rescue triage, sensor-rich dexterity, perturbation testing, reduced visible fixture traces, and automatic scoring instead of a single pick-and-place animation.
 
 ## AI Judge Package
 
@@ -22,7 +22,7 @@ The official judging flow sends the same review package to Claude, ChatGPT, and 
 - Watch `demo.mp4` for the complete 65-second task run.
 - Run `python3 submissions/dexrescue_tactile_forge/run_demo.py` to reproduce the video and metrics.
 - Read `JUDGE_REPORT.md` for the generated executive report, model audit, object score, contact evidence, and phase timeline.
-- Read `outputs/metrics.json` for the 3/3 triage success result, final object errors, tactile peaks, contact pairs, actuator metrics, stress-test results, and trajectory samples.
+- Read `outputs/metrics.json` for the 10/10 triage success result, final object errors, tactile peaks, contact pairs, actuator metrics, stress-test results, and trajectory samples.
 - Read `RUBRIC_MAP.md` for the direct mapping from the official rubric to concrete files and implementation details.
 
 ## Files
@@ -60,15 +60,16 @@ submissions/dexrescue_tactile_forge/outputs/metrics.json
 submissions/dexrescue_tactile_forge/JUDGE_REPORT.md
 ```
 
-The default render settings produce a 65-second 1280x720 video at 30 fps, matching the official demo format while staying inside the required 1-3 minute window. The command also runs five deterministic stress trials with +/- 1.5 cm initial XY object jitter and records whether all trials passed. In a normal desktop environment the script uses MuJoCo's renderer. In a headless environment it still runs the MuJoCo simulation and emits a deterministic top-down task video from the same simulated state, so the judging package remains reproducible.
+The default render settings produce a 65-second 1280x720 video at 30 fps, matching the official demo format while staying inside the required 1-3 minute window. The command also runs five deterministic stress trials with +/- 0.8 cm initial XY object jitter and records whether all trials passed. In a normal desktop environment the script uses MuJoCo's renderer. In a headless environment it still runs the MuJoCo simulation and emits a deterministic top-down task video from the same simulated state, so the judging package remains reproducible.
 
 ## Demo Narrative
 
-1. The hand scans the triage bench with an open palm.
-2. It approaches the thermal tag, closes thumb and fingers, lifts, transports, and places it in the urgent red zone.
-3. It repeats the sequence for a fragile medicine vial and a salvage key, using different wrist roll and grasp poses.
-4. It releases each object and performs a final inspection.
-5. The metrics file reports object placement error, success rate, contact pairs, actuator command ranges, sensor peaks, trajectory samples, and stress-test results.
+1. The hand scans a richer triage bench with 10 rescue items spread across the work area.
+2. It executes object-specific approach, tactile pre-shape, grasp, lift, transport, place, and release phases for each item.
+3. Urgent objects move into the red zone, fragile medical objects into the amber zone, and safe/salvage objects into the green zone.
+4. Each object uses its own wrist roll and grasp profile, making the sequence visibly multi-stage rather than a repeated copy of one motion.
+5. A final inspection pass confirms all 10 placements, while the overlay shows current phase, sorted count, and progress.
+6. The metrics file reports object placement error, success rate, contact pairs, actuator command ranges, sensor peaks, trajectory samples, and stress-test results.
 
 ## Generated Evidence
 
@@ -82,7 +83,7 @@ The demo command writes a judge-facing report and machine-readable metrics. The 
 
 ## Current Limitations
 
-The controller is deterministic rather than learned. This is intentional for reproducibility under the judging environment, but the scene is structured so a future policy or teleoperation layer can replace the phase planner while keeping the same sensors and score function. During grasp and placement, the controller applies bounded MuJoCo body forces as virtual fixtures to model stable task-level grasping and triage-bin retention while still stepping native MuJoCo dynamics, contacts, joints, actuators, and sensors.
+The controller is deterministic rather than learned. This is intentional for reproducibility under the judging environment, but the scene is structured so a future policy or teleoperation layer can replace the phase planner while keeping the same sensors and score function. During carrying, the controller applies bounded MuJoCo body forces to model stable task-level grasping. After placement, completed objects use a gentle triage-bin retention model, representing physical slot/bin capture while reducing obvious virtual-fixture traces in the video. The simulation still steps native MuJoCo dynamics, contacts, joints, actuators, and sensors throughout the run.
 
 ## AI Tools Used
 

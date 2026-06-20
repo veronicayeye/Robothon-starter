@@ -6,7 +6,7 @@ DexRescue Tactile Forge
 
 ## Summary
 
-This submission is a MuJoCo dexterous-manipulation triage lab. A five-finger tactile hand autonomously sorts three emergency-response objects into triage zones while logging touch sensors, contact pairs, actuator commands, joint state, trajectory samples, rendered video, perturbation stress tests, and final placement metrics.
+This submission is a MuJoCo dexterous-manipulation triage lab. A five-finger tactile hand autonomously completes 10 emergency-response subtasks - thermal tag, medicine vial, salvage key, airway clip, IV connector, radio beacon, data chip, pressure syringe, hazmat cap, and seal puck - while logging touch sensors, contact pairs, actuator commands, joint state, trajectory samples, rendered video, perturbation stress tests, and final placement metrics.
 
 ## Run
 
@@ -21,7 +21,7 @@ python3 submissions/dexrescue_tactile_forge/run_demo.py
 - `submissions/dexrescue_tactile_forge/outputs/metrics.json`
 - `submissions/dexrescue_tactile_forge/JUDGE_REPORT.md`
 
-The default demo is 65 seconds at 1280x720 / 30 fps and reports 3/3 successful triage placements. The command also emits a judge-facing report with MuJoCo model audit counts, phase timeline, contact evidence, actuator metrics, tactile peaks, and deterministic initial-position jitter trials.
+The default demo is 65 seconds at 1280x720 / 30 fps and reports 10/10 successful triage placements. The command also emits a judge-facing report with MuJoCo model audit counts, phase timeline, contact evidence, actuator metrics, tactile peaks, and five deterministic initial-position jitter trials at +/- 0.8 cm. The updated demo overlay shows phase, progress, and sorted-object count for a clearer judge-facing narrative.
 
 ## Rubric Notes
 

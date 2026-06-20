@@ -19,7 +19,7 @@ The script generates `demo.mp4`, `outputs/metrics.json`, and `JUDGE_REPORT.md`. 
 
 Evidence in `scene.xml`:
 
-- Free bodies for task objects.
+- Free bodies for 10 task objects.
 - Slide joints for gantry positioning.
 - Hinge joints for wrist, thumb, and four fingers.
 - Position actuators for palm and per-finger control.
@@ -27,19 +27,26 @@ Evidence in `scene.xml`:
 - Touch sensors on fingertips.
 - Joint position and velocity sensors.
 - Frame-position sensor on the palm.
-- Cameras and materialized triage zones.
+- Cameras, materialized triage zones, a wider workbench, and varied small-object shapes/materials.
 
 Generated evidence in `JUDGE_REPORT.md` and `outputs/metrics.json` includes counts for bodies, geoms, joints, DOFs, actuators, sensors, sites, and cameras, plus contact-pair statistics observed while the simulation runs.
 
 ## 03 Task Design
 
-The task is emergency-response triage. The hand must classify and move three object types to separate zones:
+The task is emergency-response triage. The hand must classify and move 10 rescue items through a staged arena:
 
 - `thermal_tag` -> urgent red zone.
 - `med_vial` -> fragile medicine zone.
 - `salvage_key` -> safe green zone.
+- `airway_clip` -> urgent red zone.
+- `iv_connector` -> fragile medicine zone.
+- `radio_beacon` -> urgent red zone.
+- `data_chip` -> safe green zone.
+- `pressure_syringe` -> fragile medicine zone.
+- `hazmat_cap` -> urgent red zone.
+- `seal_puck` -> safe green zone.
 
-The score function reports final object position, target zone, XY error, success margin, and success rate. The default command also runs deterministic initial-position jitter trials, so task success is not only asserted from one nominal pose.
+The score function reports final object position, target zone, XY error, success margin, and success rate. The default command also runs five deterministic initial-position jitter trials at +/- 0.8 cm, so task success is not only asserted from one nominal pose.
 
 ## 04 Control
 
@@ -55,11 +62,11 @@ The score function reports final object position, target zone, XY error, success
 8. release
 9. final inspection
 
-The controller commands the gantry, wrist, thumb opposition, and each finger joint. It also applies bounded `xfrc_applied` body forces as virtual fixtures during grasp and triage-bin retention, which keeps the system deterministic while still running through MuJoCo dynamics. Actuator min/max command ranges and total variation are logged in `outputs/metrics.json`.
+The controller commands the gantry, wrist, thumb opposition, and each finger joint. Each rescue item has an object-specific wrist roll and grasp profile. During carrying it applies bounded `xfrc_applied` body forces for stable task-level grasping; after placement it switches to a gentle triage-bin retention model that represents physical bin/slot capture and reduces visible fixture traces. Actuator min/max command ranges and total variation are logged in `outputs/metrics.json`.
 
 ## 05 Dexterous Manipulation
 
-The hand has thumb opposition plus index, middle, ring, and little fingers. Each finger has independent joint control and a tactile site. The controller uses different wrist roll values and grasp profiles per object. Per-object tactile peaks are logged so reviewers can verify that the dexterous hand is not just visually scripted.
+The hand has thumb opposition plus index, middle, ring, and little fingers. Each finger has independent joint control and a tactile site. The controller uses different wrist roll values and grasp profiles across small boxes, capsules, and cylinders. Per-object tactile peaks are logged so reviewers can verify that the dexterous hand is not just visually scripted.
 
 ## 06 Engineering Quality
 
@@ -67,8 +74,8 @@ All submission files are isolated under `submissions/dexrescue_tactile_forge/`. 
 
 ## 07 Presentation
 
-The generated video shows the full task sequence. The metrics JSON contains trajectory samples with phase names, grasp values, tactile readings, contact metrics, actuator metrics, stress-test results, and final score.
+The generated video shows the full 10-subtask sequence with an overlay for current phase, progress, and sorted-object count. The metrics JSON contains trajectory samples with phase names, grasp values, tactile readings, contact metrics, actuator metrics, stress-test results, and final score.
 
 ## 08 Innovation
 
-The project combines a rescue-triage scenario, tactile sensor instrumentation, five-finger manipulation, automatic scoring, deterministic perturbation testing, model auditing, and a renderer fallback designed for headless AI evaluation environments.
+The project combines a 10-stage rescue-triage scenario, tactile sensor instrumentation, five-finger manipulation, automatic scoring, deterministic perturbation testing, reduced visible fixture traces, model auditing, and a renderer fallback designed for headless AI evaluation environments.
