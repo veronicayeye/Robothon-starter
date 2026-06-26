@@ -12,7 +12,7 @@ Registration UUID: `b5dff473-9112-4b8b-a87c-4f2c26347a0d`
 - **Control:** deterministic autonomous task plan with phase-based motion, object-aware pick targets, grasp pre-shaping, bounded grasp support, triage-bin retention, transport, release, final inspection, and machine-readable trajectory samples.
 - **Dexterous manipulation:** thumb opposition plus four fingers, per-finger MCP/PIP control, rubberized fingertip contacts, object-specific wrist roll/grasp profiles, and tactile peak logging.
 - **Engineering quality:** all project files live in this submission folder; generated artifacts include model audit counts, actuator command ranges, contact pairs, trajectory samples, and stress-test results.
-- **Presentation:** the script renders a 65-second overview video with phase labels, progress, and sorted-object count suitable for the required 1-3 minute demo.
+- **Presentation:** the script renders a 65-second dual-view video with a close wrist camera, an overview inset, phase labels, progress, and sorted-object count suitable for the required 1-3 minute demo.
 - **Innovation:** combines 10-stage tactile rescue triage, sensor-rich dexterity, perturbation testing, reduced visible fixture traces, and automatic scoring instead of a single pick-and-place animation.
 
 ## AI Judge Package
@@ -68,7 +68,7 @@ The default render settings produce a 65-second 1280x720 video at 30 fps, matchi
 2. It executes object-specific approach, tactile pre-shape, grasp, lift, transport, place, and release phases for each item.
 3. Urgent objects move into the red zone, fragile medical objects into the amber zone, and safe/salvage objects into the green zone.
 4. Each object uses its own wrist roll and grasp profile, making the sequence visibly multi-stage rather than a repeated copy of one motion.
-5. A final inspection pass confirms all 10 placements, while the overlay shows current phase, sorted count, and progress.
+5. A final inspection pass confirms all 10 placements, while the overlay shows current phase, sorted count, progress, wrist close-up, and overview inset.
 6. The metrics file reports object placement error, success rate, contact pairs, actuator command ranges, sensor peaks, trajectory samples, and stress-test results.
 
 ## Generated Evidence

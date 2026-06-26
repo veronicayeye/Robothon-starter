@@ -88,7 +88,7 @@ Top contact pairs:
 4. Control: phase planner commands gantry, wrist, thumb opposition, every finger joint, object-specific wrist roll, and bounded grasp/bin constraints, then logs actuator ranges.
 5. Dexterous Manipulation: five-finger hand uses per-finger closure, wrist roll, tactile sites, and object-specific grasp profiles across small boxes, capsules, and cylinders.
 6. Engineering Quality: generated outputs are machine-readable and all evidence lives inside one submission folder.
-7. Presentation: the video overlay shows sorted count, current phase, progress, scan, approach, pre-shape, grasp, lift, transport, place, release, and inspection.
+7. Presentation: the video uses a wrist-camera main view plus an overview inset, with sorted count, current phase, progress, scan, approach, pre-shape, grasp, lift, transport, place, release, and inspection.
 8. Innovation: tactile disaster-response triage plus automatic scoring, perturbation testing, reduced visible fixture traces, and headless-safe rendering.
 
 ## Phase Timeline

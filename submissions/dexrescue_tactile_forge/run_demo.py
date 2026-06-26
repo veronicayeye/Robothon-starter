@@ -525,6 +525,7 @@ SEGMENTS = {
     "T": ["111", "010", "010", "010", "010"],
     "U": ["101", "101", "101", "101", "111"],
     "V": ["101", "101", "101", "101", "010"],
+    "W": ["101", "101", "101", "111", "101"],
     "X": ["101", "101", "010", "101", "101"],
     "Y": ["101", "101", "010", "010", "010"],
     " ": ["000", "000", "000", "000", "000"],
@@ -564,6 +565,39 @@ def draw_progress(frame: np.ndarray, progress: float) -> None:
     frame[bar_y : bar_y + bar_h, bar_x : bar_x + fill] = (214, 163, 103)
 
 
+def draw_frame_border(frame: np.ndarray, x: int, y: int, w: int, h: int, color: tuple[int, int, int]) -> None:
+    thickness = max(2, frame.shape[1] // 600)
+    frame[y : y + thickness, x : x + w] = color
+    frame[y + h - thickness : y + h, x : x + w] = color
+    frame[y : y + h, x : x + thickness] = color
+    frame[y : y + h, x + w - thickness : x + w] = color
+
+
+def paste_inset(
+    base: np.ndarray,
+    inset: np.ndarray,
+    x: int,
+    y: int,
+    *,
+    label: str | None = None,
+    label_color: tuple[int, int, int] = (239, 197, 180),
+) -> None:
+    h, w = inset.shape[:2]
+    draw_frame_border(base, x - 4, y - 4, w + 8, h + 8, (114, 82, 70))
+    base[y : y + h, x : x + w] = inset
+    if label:
+        draw_text(base, label, x + 10, y + 10, label_color, max(2, base.shape[1] // 640))
+
+
+def render_mujoco_camera_frame(
+    renderer: mujoco.Renderer,
+    data: mujoco.MjData,
+    camera: str,
+) -> np.ndarray:
+    renderer.update_scene(data, camera=camera)
+    return renderer.render().copy()
+
+
 def render_topdown_frame(
     model: mujoco.MjModel,
     data: mujoco.MjData,
@@ -601,6 +635,25 @@ def render_topdown_frame(
         draw_circle(frame, finger, max(5, width // 160), (16, 16, 17))
         draw_circle(frame, finger + np.array([0.0, 0.018 * openness, 0.0]), max(4, width // 190), (46, 48, 50))
 
+    return frame
+
+
+def render_composite_frame(
+    wrist_renderer: mujoco.Renderer,
+    model: mujoco.MjModel,
+    data: mujoco.MjData,
+    phase: Phase,
+    width: int,
+    height: int,
+) -> np.ndarray:
+    frame = render_mujoco_camera_frame(wrist_renderer, data, camera="wrist_cam")
+    inset_w = max(300, width // 4)
+    inset_h = max(170, height // 4)
+    inset = render_topdown_frame(model, data, phase, inset_w, inset_h)
+    x = width - inset_w - 38
+    y = 100
+    paste_inset(frame, inset, x, y, label="OVERVIEW")
+    draw_text(frame, "WRIST CAM", 56, 84, (214, 163, 103), max(2, width // 640))
     return frame
 
 
@@ -795,7 +848,7 @@ def write_judge_report(summary: dict, report: Path) -> None:
             "4. Control: phase planner commands gantry, wrist, thumb opposition, every finger joint, object-specific wrist roll, and bounded grasp/bin constraints, then logs actuator ranges.",
             "5. Dexterous Manipulation: five-finger hand uses per-finger closure, wrist roll, tactile sites, and object-specific grasp profiles across small boxes, capsules, and cylinders.",
             "6. Engineering Quality: generated outputs are machine-readable and all evidence lives inside one submission folder.",
-            "7. Presentation: the video overlay shows sorted count, current phase, progress, scan, approach, pre-shape, grasp, lift, transport, place, release, and inspection.",
+            "7. Presentation: the video uses a wrist-camera main view plus an overview inset, with sorted count, current phase, progress, scan, approach, pre-shape, grasp, lift, transport, place, release, and inspection.",
             "8. Innovation: tactile disaster-response triage plus automatic scoring, perturbation testing, reduced visible fixture traces, and headless-safe rendering.",
             "",
             "## Phase Timeline",
@@ -832,10 +885,10 @@ def run_demo(
     duration = max(duration, plan_duration)
     mujoco.mj_forward(model, data)
 
-    renderer = None
+    wrist_renderer = None
     renderer_error = None
     try:
-        renderer = mujoco.Renderer(model, width=width, height=height)
+        wrist_renderer = mujoco.Renderer(model, width=width, height=height)
     except Exception as exc:
         renderer_error = str(exc)
     output.parent.mkdir(parents=True, exist_ok=True)
@@ -906,9 +959,8 @@ def run_demo(
                     peaks = per_object_touch_peaks[phase.carried]
                     peaks[key] = max(peaks.get(key, 0.0), value)
 
-            if renderer is not None:
-                renderer.update_scene(data, camera="overview")
-                frame = renderer.render().copy()
+            if wrist_renderer is not None:
+                frame = render_composite_frame(wrist_renderer, model, data, phase, width, height)
             else:
                 frame = render_topdown_frame(model, data, phase, width, height)
             completed_count = len(completed_objects(phases, plan_time_s))
@@ -929,8 +981,8 @@ def run_demo(
                 )
     finally:
         writer.close()
-        if renderer is not None:
-            renderer.close()
+        if wrist_renderer is not None:
+            wrist_renderer.close()
 
     sorted_pairs = sorted(contact_pairs.items(), key=lambda item: item[1], reverse=True)
     summary = {
