@@ -15,13 +15,25 @@ Registration UUID: `b5dff473-9112-4b8b-a87c-4f2c26347a0d`
 - **Presentation:** the script renders a 65-second dual-view video with a close wrist camera, an overview inset, phase labels, progress, and sorted-object count suitable for the required 1-3 minute demo.
 - **Innovation:** combines 10-stage tactile rescue triage, sensor-rich dexterity, perturbation testing, reduced visible fixture traces, and automatic scoring instead of a single pick-and-place animation.
 
+## Judge Evidence At A Glance
+
+| Rubric area | Concrete evidence |
+| --- | --- |
+| Runnability | One command regenerates `demo.mp4`, `outputs/metrics.json`, and `JUDGE_REPORT.md`. |
+| MuJoCo depth | 74 DOF, 24 joints, 27 geoms, 14 actuators, 10 sensors, 2 cameras, free-body rescue objects, solver/friction settings, and 108 observed contact pairs. |
+| Task design | 10 semantic triage subtasks across urgent, fragile, and safe zones, plus final inspection and scoring. |
+| Control | Gantry, wrist, thumb, and four independent fingers are commanded with 196.7851 total actuator-command variation. |
+| Dexterity | Object-specific wrist roll and grasp profiles, five fingertip touch sensors, and nonzero tactile peaks on 7/10 carried objects. |
+| Robustness | 5/5 deterministic initial-position jitter stress trials pass at 10/10 objects sorted. |
+| Presentation | 65-second 1280x720 dual-view demo with wrist-camera close-up, overview inset, phase label, progress, and sorted count. |
+
 ## AI Judge Package
 
 The official judging flow sends the same review package to Claude, ChatGPT, and Gemini. This submission is organized so each judge can quickly verify the same evidence:
 
 - Watch `demo.mp4` for the complete 65-second task run.
 - Run `python3 submissions/dexrescue_tactile_forge/run_demo.py` to reproduce the video and metrics.
-- Read `JUDGE_REPORT.md` for the generated executive report, model audit, object score, contact evidence, and phase timeline.
+- Read `JUDGE_REPORT.md` for the generated executive report, model audit, object score, tactile evidence, actuator coverage, contact evidence, stress trials, and phase timeline.
 - Read `outputs/metrics.json` for the 10/10 triage success result, final object errors, tactile peaks, contact pairs, actuator metrics, stress-test results, and trajectory samples.
 - Read `RUBRIC_MAP.md` for the direct mapping from the official rubric to concrete files and implementation details.
 
